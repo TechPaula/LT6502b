@@ -2370,10 +2370,10 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "9\" RA8875 Display - https://www.buydisplay.com/download/manual/ER-TFTM090-2_Datasheet.pdf"
+	(text_box "Connector - 40FMN-BMT-A-TF\n   (1mm pitch, 40 pin, single side, \"normal\" type, 5.1mm tall, 3mm deep, 42mm wide\n\nDisplay\n   (1mm pitch, 40 pin, single side, bottom)"
 		(exclude_from_sim no)
 		(at 165.1 129.54 0)
-		(size 83.82 33.02)
+		(size 92.71 33.02)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
