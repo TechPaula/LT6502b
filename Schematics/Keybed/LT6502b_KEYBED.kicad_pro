@@ -503,7 +503,7 @@
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "LT6502_KEYBED.step",
+      "step": "../../Case/Models/LT6502_KEYBED.step",
       "svg": "",
       "vrml": ""
     },
