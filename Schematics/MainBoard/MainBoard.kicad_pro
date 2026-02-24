@@ -777,6 +777,10 @@
       "ExpansionSlot0"
     ],
     [
+      "39298a53-add0-4a81-be78-26b41d35ea7f",
+      "KEY_LEDs"
+    ],
+    [
       "e86b2ea6-d99f-434f-aafb-2d5deecd7ca6",
       "VIA"
     ],
@@ -789,8 +793,12 @@
       "Keyboard IF"
     ],
     [
-      "ace794b8-58ab-4627-9a1c-b227c045e9b2",
+      "5f8ad4a4-7ad3-4c8c-8c4e-28311269ac0b",
       "Modem"
+    ],
+    [
+      "b420dd45-a5e8-444f-84c4-08338f152d5e",
+      "KeyMatrix"
     ]
   ],
   "text_variables": {}

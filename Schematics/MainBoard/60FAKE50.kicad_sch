@@ -1020,6 +1020,194 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Jumper:Jumper_3_Bridged12"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom no)
+			(on_board yes)
+			(property "Reference" "JP"
+				(at -2.54 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Jumper_3_Bridged12"
+				(at 0 2.794 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Jumper, 3-pole, pins 1+2 closed/bridged"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Jumper SPDT"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "Jumper* TestPoint*3Pads* TestPoint*Bridge*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Jumper_3_Bridged12_0_0"
+				(circle
+					(center -3.302 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 0 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 3.302 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_3_Bridged12_0_1"
+				(arc
+					(start -3.048 0.508)
+					(mid -1.651 0.9912)
+					(end -0.254 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Jumper_3_Bridged12_1_1"
+				(pin passive line
+					(at -6.35 0 0)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 6.35 0 180)
+					(length 2.54)
+					(name "B"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_names
@@ -1363,6 +1551,26 @@
 			(embedded_fonts no)
 		)
 	)
+	(text_box "I'm not sure if I want the FT245 to be in permanent reset when there is no USB connected.\nSo this jumper lets me chose from that (as per the FTDI datasheet) or the global reset"
+		(exclude_from_sim no)
+		(at 48.26 128.27 0)
+		(size 54.61 10.16)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "b4904b57-c8e0-4f79-9cd4-29811b6c01fd")
+	)
 	(junction
 		(at 162.56 132.08)
 		(diameter 0)
@@ -1483,6 +1691,16 @@
 	)
 	(wire
 		(pts
+			(xy 85.09 115.57) (xy 95.25 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c95ce97-01cc-48c4-9bac-354b5f6e5d66")
+	)
+	(wire
+		(pts
 			(xy 143.51 55.88) (xy 143.51 59.69)
 		)
 		(stroke
@@ -1500,6 +1718,16 @@
 			(type default)
 		)
 		(uuid "3284f600-49cb-4f2f-bf02-2b9c10cae2d7")
+	)
+	(wire
+		(pts
+			(xy 71.12 124.46) (xy 81.28 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "32ca17f3-ce40-4808-ad80-fb4ba20d7648")
 	)
 	(wire
 		(pts
@@ -1533,16 +1761,6 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 104.14) (xy 99.06 104.14)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44d0bfad-f33b-4bfb-87bb-3f35fbfd7b14")
-	)
-	(wire
-		(pts
 			(xy 106.68 104.14) (xy 113.03 104.14)
 		)
 		(stroke
@@ -1553,7 +1771,7 @@
 	)
 	(wire
 		(pts
-			(xy 90.17 104.14) (xy 90.17 102.87)
+			(xy 81.28 109.22) (xy 81.28 107.95)
 		)
 		(stroke
 			(width 0)
@@ -1633,6 +1851,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 115.57) (xy 95.25 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8344309f-bb8e-4783-9ffc-45b365b2fde0")
+	)
+	(wire
+		(pts
 			(xy 143.51 59.69) (xy 201.93 59.69)
 		)
 		(stroke
@@ -1660,6 +1888,16 @@
 			(type default)
 		)
 		(uuid "9af9a71c-f410-4925-bf10-95ccb12d7d8e")
+	)
+	(wire
+		(pts
+			(xy 81.28 124.46) (xy 81.28 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9dda0d75-fc54-4c7e-903d-6615e61c0908")
 	)
 	(wire
 		(pts
@@ -1843,6 +2081,16 @@
 	)
 	(wire
 		(pts
+			(xy 95.25 104.14) (xy 99.06 104.14)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e3429704-9ff1-4502-ba35-1eca0d9424fb")
+	)
+	(wire
+		(pts
 			(xy 201.93 111.76) (xy 201.93 119.38)
 		)
 		(stroke
@@ -2016,6 +2264,17 @@
 		)
 		(uuid "47da3c43-3587-4146-90ce-10b608d822d0")
 	)
+	(hierarchical_label "nRES"
+		(shape input)
+		(at 71.12 124.46 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "48bf57b0-7b21-4a17-a947-587cfbee67e6")
+	)
 	(hierarchical_label "D5"
 		(shape bidirectional)
 		(at 189.23 93.98 0)
@@ -2114,6 +2373,80 @@
 			(justify left)
 		)
 		(uuid "d9d578a5-9466-4d42-a238-4ce914ff279b")
+	)
+	(symbol
+		(lib_id "Jumper:Jumper_3_Bridged12")
+		(at 81.28 115.57 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1b26da87-1206-4e47-a317-0e19ec33849c")
+		(property "Reference" "JP6"
+			(at 78.74 114.2999 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Jumper_3_Bridged12"
+			(at 78.74 116.8399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Jumper:SolderJumper-3_P1.3mm_Bridged2Bar12_RoundedPad1.0x1.5mm"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Jumper, 3-pole, pins 1+2 closed/bridged"
+			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "3"
+			(uuid "226e6afd-c18e-48b2-9fde-5b603fde9ba3")
+		)
+		(pin "1"
+			(uuid "2081a719-0bf7-4dc1-b322-58708b333bb6")
+		)
+		(pin "2"
+			(uuid "9c041197-68ef-4b8d-870e-cff955316665")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/a2243a34-697c-4939-97f7-df548e421864/7bd40c60-bb79-47f8-862c-3602d4cfed76"
+					(reference "JP6")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2261,7 +2594,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 90.17 102.87 0)
+		(at 81.28 107.95 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2270,7 +2603,7 @@
 		(fields_autoplaced yes)
 		(uuid "446b4715-f046-4107-81ae-a26ee2fc9185")
 		(property "Reference" "#PWR0153"
-			(at 90.17 106.68 0)
+			(at 81.28 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2279,7 +2612,7 @@
 			)
 		)
 		(property "Value" "VPWR"
-			(at 90.17 99.06 0)
+			(at 81.28 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2287,7 +2620,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 90.17 102.87 0)
+			(at 81.28 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2296,7 +2629,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 90.17 102.87 0)
+			(at 81.28 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2305,7 +2638,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 90.17 102.87 0)
+			(at 81.28 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
