@@ -5146,7 +5146,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x20_P2.54mm_Vertical"
+		(property "Footprint" "FFC3B07-40-T:GCT_FFC3B07-40-T"
 			(at 193.04 71.12 0)
 			(effects
 				(font
