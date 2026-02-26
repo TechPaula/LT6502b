@@ -1666,6 +1666,12 @@
 		(uuid "100d9e8d-959a-4813-9a88-804085adf0ce")
 	)
 	(junction
+		(at 229.87 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "219f3ccb-2dd8-45a6-a30f-f0c8d8c902e6")
+	)
+	(junction
 		(at 116.84 171.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1676,6 +1682,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "54ae30be-8011-4197-b759-f817a509d4a0")
+	)
+	(junction
+		(at 213.36 92.71)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "672c6f64-bc33-488a-a429-2df614a02073")
 	)
 	(junction
 		(at 81.28 90.17)
@@ -1737,6 +1749,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 92.71) (xy 218.44 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f5f64ea-77da-45c2-9f5a-9a02a89d411d")
+	)
+	(wire
+		(pts
 			(xy 156.21 107.95) (xy 163.83 107.95)
 		)
 		(stroke
@@ -1764,6 +1786,16 @@
 			(type default)
 		)
 		(uuid "1951e653-e0bc-4555-af25-8d8b886f9cb6")
+	)
+	(wire
+		(pts
+			(xy 226.06 80.01) (xy 229.87 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c655be3-35e3-4521-b417-6238fb1ceb04")
 	)
 	(wire
 		(pts
@@ -1827,6 +1859,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 80.01) (xy 213.36 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3a4f8a7b-e4e2-44c5-848e-7b57515e208b")
+	)
+	(wire
+		(pts
 			(xy 128.27 80.01) (xy 134.62 80.01)
 		)
 		(stroke
@@ -1867,7 +1909,7 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 92.71) (xy 218.44 92.71)
+			(xy 187.96 92.71) (xy 213.36 92.71)
 		)
 		(stroke
 			(width 0)
@@ -1884,6 +1926,16 @@
 			(type default)
 		)
 		(uuid "5e62a414-6e2e-4ff8-b8a7-7297fccb9a49")
+	)
+	(wire
+		(pts
+			(xy 218.44 80.01) (xy 213.36 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5ebf1f10-577b-4d4f-8695-8d18c8ebf45e")
 	)
 	(wire
 		(pts
@@ -1997,6 +2049,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 80.01) (xy 229.87 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a739a3e5-5f45-4637-b6b5-c296f9fea695")
+	)
+	(wire
+		(pts
 			(xy 81.28 90.17) (xy 129.54 90.17)
 		)
 		(stroke
@@ -2027,7 +2089,7 @@
 	)
 	(wire
 		(pts
-			(xy 226.06 92.71) (xy 237.49 92.71)
+			(xy 226.06 92.71) (xy 229.87 92.71)
 		)
 		(stroke
 			(width 0)
@@ -2084,6 +2146,16 @@
 			(type default)
 		)
 		(uuid "c8d972ed-01f8-4089-bd72-da93939783e3")
+	)
+	(wire
+		(pts
+			(xy 229.87 92.71) (xy 237.49 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3fa6e5d-e31f-495c-9d8d-ea109f1bc890")
 	)
 	(wire
 		(pts
@@ -2307,92 +2379,6 @@
 			(project "LT6502"
 				(path "/a2243a34-697c-4939-97f7-df548e421864/598e71c9-5c06-425f-ac54-aba71004555d"
 					(reference "#PWR0185")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 222.25 92.71 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "23de3238-ed60-44d4-bcf8-5fb0c4fdd5c6")
-		(property "Reference" "C56"
-			(at 221.361 85.09 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "250uF 16V"
-			(at 221.361 87.63 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_10x12.5"
-			(at 226.06 91.7448 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 222.25 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 222.25 92.71 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "667-EEV-FK1V681Q"
-			(at 222.25 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "DNF"
-			(at 222.25 92.71 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7e8da309-6c11-40df-a757-156b7cdc8b0d")
-		)
-		(pin "2"
-			(uuid "ba3e8206-e515-488a-86fe-f5b97696844c")
-		)
-		(instances
-			(project ""
-				(path "/a2243a34-697c-4939-97f7-df548e421864/598e71c9-5c06-425f-ac54-aba71004555d"
-					(reference "C56")
 					(unit 1)
 				)
 			)
@@ -3335,6 +3321,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 222.25 80.01 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "87dc3924-50e8-4337-a3b1-7bc4445fed42")
+		(property "Reference" "C69"
+			(at 220.472 73.66 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100uF 10V Tant"
+			(at 226.314 75.692 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N"
+			(at 226.06 79.0448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 222.25 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "DNP"
+			(at 222.25 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "97eb34bf-c7c2-4427-9813-bacf97205755")
+		)
+		(pin "2"
+			(uuid "b26dbd07-dc4e-4d4f-ab15-11b0e40e02d2")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/a2243a34-697c-4939-97f7-df548e421864/598e71c9-5c06-425f-ac54-aba71004555d"
+					(reference "C69")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 121.92 102.87 0)
 		(unit 1)
@@ -3427,7 +3489,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "CMS160925078SP67"
+		(property "Footprint" "CMS-160925-078SP-67:CMS160925078SP67"
 			(at 248.92 195.25 0)
 			(effects
 				(font
@@ -3878,7 +3940,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 128.27 79.0448 0)
 			(effects
 				(font
@@ -3930,6 +3992,82 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 222.25 92.71 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f7c09592-5a82-4d31-8ab9-7a8343b5a546")
+		(property "Reference" "C56"
+			(at 220.472 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100uF 10V Tant"
+			(at 226.314 88.392 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N"
+			(at 226.06 91.7448 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 222.25 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 222.25 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "DNP"
+			(at 222.25 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "022fc54c-e632-49de-9641-5a95b046cfc1")
+		)
+		(pin "2"
+			(uuid "01cc09c3-63e8-40ce-8d9e-57a0379dc476")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/a2243a34-697c-4939-97f7-df548e421864/598e71c9-5c06-425f-ac54-aba71004555d"
+					(reference "C56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 187.96 97.79 0)
 		(unit 1)
@@ -3956,7 +4094,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 188.9252 101.6 0)
 			(effects
 				(font

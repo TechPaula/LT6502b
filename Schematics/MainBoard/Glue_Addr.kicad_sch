@@ -3484,6 +3484,10 @@
 		(uuid "7cdfdeaf-f73a-42c6-9503-797079808599")
 	)
 	(no_connect
+		(at 247.65 119.38)
+		(uuid "7eb74b03-5e38-4b92-9661-3ad4bda5ce3b")
+	)
+	(no_connect
 		(at 193.04 68.58)
 		(uuid "93eb2aaa-29f5-4969-96e9-7a97987c6959")
 	)
@@ -3907,7 +3911,7 @@
 	)
 	(wire
 		(pts
-			(xy 172.72 147.32) (xy 172.72 121.92)
+			(xy 157.48 147.32) (xy 157.48 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3937,7 +3941,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 147.32) (xy 167.64 121.92)
+			(xy 162.56 147.32) (xy 162.56 121.92)
 		)
 		(stroke
 			(width 0)
@@ -3957,7 +3961,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 121.92) (xy 157.48 147.32)
+			(xy 172.72 121.92) (xy 172.72 147.32)
 		)
 		(stroke
 			(width 0)
@@ -4487,16 +4491,6 @@
 	)
 	(wire
 		(pts
-			(xy 247.65 119.38) (xy 242.57 119.38)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64e39fbe-e099-45d1-93f6-3ff4d7b5d659")
-	)
-	(wire
-		(pts
 			(xy 162.56 25.4) (xy 162.56 45.72)
 		)
 		(stroke
@@ -4777,16 +4771,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 119.38) (xy 242.57 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "912bc663-8bbb-416d-b6f0-484a81ae3935")
-	)
-	(wire
-		(pts
 			(xy 144.78 121.92) (xy 144.78 147.32)
 		)
 		(stroke
@@ -5017,7 +5001,7 @@
 	)
 	(wire
 		(pts
-			(xy 162.56 147.32) (xy 162.56 121.92)
+			(xy 167.64 147.32) (xy 167.64 121.92)
 		)
 		(stroke
 			(width 0)
@@ -5277,7 +5261,7 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 147.32) (xy 160.02 121.92)
+			(xy 170.18 147.32) (xy 170.18 121.92)
 		)
 		(stroke
 			(width 0)
@@ -5557,16 +5541,6 @@
 	)
 	(wire
 		(pts
-			(xy 242.57 105.41) (xy 242.57 107.95)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f2d78cf9-c99d-4d6c-bdcb-99642fe94440")
-	)
-	(wire
-		(pts
 			(xy 30.48 74.93) (xy 30.48 78.74)
 		)
 		(stroke
@@ -5577,7 +5551,7 @@
 	)
 	(wire
 		(pts
-			(xy 170.18 147.32) (xy 170.18 121.92)
+			(xy 160.02 147.32) (xy 160.02 121.92)
 		)
 		(stroke
 			(width 0)
@@ -5666,7 +5640,7 @@
 		(uuid "fe10a057-0255-4081-b636-9712f7722272")
 	)
 	(label "A5"
-		(at 160.02 142.24 270)
+		(at 170.18 142.24 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5686,7 +5660,7 @@
 		(uuid "1907b036-b256-419a-a411-c1b5ea63f75a")
 	)
 	(label "A1"
-		(at 170.18 142.24 270)
+		(at 160.02 142.24 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5726,7 +5700,7 @@
 		(uuid "5182751f-3391-4703-bd20-6e3fb0ae0407")
 	)
 	(label "A4"
-		(at 162.56 142.24 270)
+		(at 167.64 142.24 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5756,7 +5730,7 @@
 		(uuid "5a171019-2b07-4c05-89af-d718c3befdd8")
 	)
 	(label "A2"
-		(at 167.64 142.24 270)
+		(at 162.56 142.24 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5816,7 +5790,7 @@
 		(uuid "9c9d6dc0-82f1-4044-b141-f229d54e030c")
 	)
 	(label "A6"
-		(at 157.48 142.24 270)
+		(at 172.72 142.24 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5826,7 +5800,7 @@
 		(uuid "a925c452-c0ed-42cb-a4da-4c422d591f7f")
 	)
 	(label "A0"
-		(at 172.72 142.24 270)
+		(at 157.48 142.24 270)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -6560,7 +6534,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 139.3952 186.69 0)
 			(effects
 				(font
@@ -8461,7 +8435,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical"
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Horizontal"
 			(at 40.64 162.56 0)
 			(effects
 				(font
@@ -8773,7 +8747,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 131.1148 186.69 0)
 			(effects
 				(font
@@ -8918,7 +8892,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 159.0548 186.69 0)
 			(effects
 				(font
@@ -9153,7 +9127,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 104.4448 186.69 0)
 			(effects
 				(font
@@ -9803,7 +9777,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 76.5048 186.69 0)
 			(effects
 				(font
@@ -10080,7 +10054,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 61.2648 186.69 0)
 			(effects
 				(font
@@ -10845,7 +10819,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 84.7852 186.69 0)
 			(effects
 				(font
@@ -11502,85 +11476,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 242.57 111.76 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "bd60aeb5-1cdf-4dd6-add4-75b738f4e8f0")
-		(property "Reference" "R14"
-			(at 240.03 110.4899 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "3K3"
-			(at 240.03 113.0299 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 244.348 111.76 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 242.57 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 242.57 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C25890"
-			(at 242.57 111.76 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "33e28e08-992e-495e-b5bc-a95632a2ed4c")
-		)
-		(pin "2"
-			(uuid "07c96229-dd8a-4eaf-a42c-eb2c5c9e5bc0")
-		)
-		(instances
-			(project "LT6502"
-				(path "/a2243a34-697c-4939-97f7-df548e421864/d5afc5d6-c446-466d-ac54-32ad85bd9dec"
-					(reference "R14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 38.1 74.93 0)
 		(unit 1)
@@ -11804,7 +11699,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 167.3352 186.69 0)
 			(effects
 				(font
@@ -12135,72 +12030,6 @@
 			(project "LT6502"
 				(path "/a2243a34-697c-4939-97f7-df548e421864/d5afc5d6-c446-466d-ac54-32ad85bd9dec"
 					(reference "#PWR0236")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 242.57 105.41 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f398190b-862c-4254-8b6b-99710d876146")
-		(property "Reference" "#PWR040"
-			(at 242.57 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 242.57 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 242.57 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 242.57 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 242.57 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "084ea82d-ed3f-46e2-aa8b-53ce424eb039")
-		)
-		(instances
-			(project "LT6502"
-				(path "/a2243a34-697c-4939-97f7-df548e421864/d5afc5d6-c446-466d-ac54-32ad85bd9dec"
-					(reference "#PWR040")
 					(unit 1)
 				)
 			)

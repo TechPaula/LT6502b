@@ -5,7 +5,7 @@
 	(uuid "ab769df5-7625-4ad3-a3d6-c3ca0e7677c8")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector_Generic:Conn_02x04_Odd_Even"
+		(symbol "Connector_Generic:Conn_02x02_Odd_Even"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -14,15 +14,15 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "J"
-				(at 1.27 5.08 0)
+				(at 1.27 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Value" "Conn_02x04_Odd_Even"
-				(at 1.27 -7.62 0)
+			(property "Value" "Conn_02x02_Odd_Even"
+				(at 1.27 -5.08 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -47,7 +47,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -74,27 +74,16 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_02x04_Odd_Even_1_1"
+			(symbol "Conn_02x02_Odd_Even_1_1"
 				(rectangle
-					(start -1.27 3.81)
-					(end 3.81 -6.35)
+					(start -1.27 1.27)
+					(end 3.81 -3.81)
 					(stroke
 						(width 0.254)
 						(type default)
 					)
 					(fill
 						(type background)
-					)
-				)
-				(rectangle
-					(start -1.27 2.667)
-					(end 0 2.413)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
 					)
 				)
 				(rectangle
@@ -111,28 +100,6 @@
 				(rectangle
 					(start -1.27 -2.413)
 					(end 0 -2.667)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start -1.27 -4.953)
-					(end 0 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(rectangle
-					(start 3.81 2.667)
-					(end 2.54 2.413)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -163,19 +130,8 @@
 						(type none)
 					)
 				)
-				(rectangle
-					(start 3.81 -4.953)
-					(end 2.54 -5.207)
-					(stroke
-						(width 0.1524)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
 				(pin passive line
-					(at -5.08 2.54 0)
+					(at -5.08 0 0)
 					(length 3.81)
 					(name "Pin_1"
 						(effects
@@ -193,7 +149,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
+					(at -5.08 -2.54 0)
 					(length 3.81)
 					(name "Pin_3"
 						(effects
@@ -211,43 +167,7 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 -2.54 0)
-					(length 3.81)
-					(name "Pin_5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "5"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at -5.08 -5.08 0)
-					(length 3.81)
-					(name "Pin_7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "7"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 2.54 180)
+					(at 7.62 0 180)
 					(length 3.81)
 					(name "Pin_2"
 						(effects
@@ -265,7 +185,7 @@
 					)
 				)
 				(pin passive line
-					(at 7.62 0 180)
+					(at 7.62 -2.54 180)
 					(length 3.81)
 					(name "Pin_4"
 						(effects
@@ -275,42 +195,6 @@
 						)
 					)
 					(number "4"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -2.54 180)
-					(length 3.81)
-					(name "Pin_6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "6"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 7.62 -5.08 180)
-					(length 3.81)
-					(name "Pin_8"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "8"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -892,7 +776,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Diode:1N4148"
+		(symbol "Diode:1N4148W"
 			(pin_numbers
 				(hide yes)
 			)
@@ -910,7 +794,7 @@
 					)
 				)
 			)
-			(property "Value" "1N4148"
+			(property "Value" "1N4148W"
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -918,7 +802,16 @@
 					)
 				)
 			)
-			(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+			(property "Footprint" "Diode_SMD:D_SOD-123"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -927,16 +820,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
 				(at 0 0 0)
 				(effects
 					(font
@@ -972,7 +856,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "D*DO?35*"
+			(property "ki_fp_filters" "D*SOD?123*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -981,7 +865,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "1N4148_0_1"
+			(symbol "1N4148W_0_1"
 				(polyline
 					(pts
 						(xy -1.27 1.27) (xy -1.27 -1.27)
@@ -1019,7 +903,7 @@
 					)
 				)
 			)
-			(symbol "1N4148_1_1"
+			(symbol "1N4148W_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -2205,18 +2089,6 @@
 		(uuid "3e15b197-9aa2-43f3-ad66-525e0dbb8885")
 	)
 	(junction
-		(at 200.66 100.33)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "48174934-9576-46ac-bdc6-f6b9d6c68738")
-	)
-	(junction
-		(at 187.96 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "6276c249-5b32-4f74-8a07-0b15a20c247c")
-	)
-	(junction
 		(at 191.77 69.85)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -2878,16 +2750,6 @@
 			(color 255 0 255 1)
 		)
 		(uuid "2b4ea866-847c-41c0-9d36-c3a18d809560")
-	)
-	(wire
-		(pts
-			(xy 184.15 97.79) (xy 187.96 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2f79c6c1-767f-4d01-a7a9-139c2519d2cf")
 	)
 	(wire
 		(pts
@@ -3828,16 +3690,6 @@
 	)
 	(wire
 		(pts
-			(xy 187.96 100.33) (xy 200.66 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dea368f2-8174-4654-8dac-8baa81be7039")
-	)
-	(wire
-		(pts
 			(xy 161.29 86.36) (xy 168.91 86.36)
 		)
 		(stroke
@@ -3855,16 +3707,6 @@
 			(type default)
 		)
 		(uuid "e0f4b729-50bd-47a9-b3c3-8cb214bbfc52")
-	)
-	(wire
-		(pts
-			(xy 200.66 100.33) (xy 204.47 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e1579a17-c6f8-4351-ba1b-ba6a39d6d3f3")
 	)
 	(wire
 		(pts
@@ -3966,16 +3808,6 @@
 			(color 255 0 255 1)
 		)
 		(uuid "f500ef8c-4b66-4969-ad88-c90a342a8203")
-	)
-	(wire
-		(pts
-			(xy 187.96 97.79) (xy 200.66 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f68b16b3-8e77-4933-b57c-aeec49d8aeb8")
 	)
 	(bus
 		(pts
@@ -4843,98 +4675,33 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 204.47 100.33 0)
-		(mirror y)
+		(lib_id "Connector_Generic:Conn_02x02_Odd_Even")
+		(at 193.04 92.71 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "646e35a6-a8c4-4117-aa5c-b5212baf5a46")
-		(property "Reference" "#PWR0194"
-			(at 204.47 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 204.47 96.52 0)
+		(fields_autoplaced yes)
+		(uuid "7e21e04c-eee9-44cf-9ae4-b10209ca493a")
+		(property "Reference" "J9"
+			(at 194.31 86.36 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" ""
-			(at 204.47 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 204.47 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 204.47 100.33 0)
+		(property "Value" "Conn_02x02_Odd_Even"
+			(at 194.31 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(pin "1"
-			(uuid "8079cd44-f200-4caf-a65e-d0a3b22ecb94")
-		)
-		(instances
-			(project "LT6502"
-				(path "/a2243a34-697c-4939-97f7-df548e421864/e86b2ea6-d99f-434f-aafb-2d5deecd7ca6"
-					(reference "#PWR0194")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Odd_Even")
-		(at 193.04 97.79 0)
-		(mirror x)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6f480204-cb2c-44d2-96f7-e61c476697f8")
-		(property "Reference" "J11"
-			(at 194.31 86.868 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_02x04_Odd_Even"
-			(at 194.564 89.154 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Horizontal"
-			(at 193.04 97.79 0)
+		(property "Footprint" "Connector_PinHeader_1.27mm:PinHeader_2x02_P1.27mm_Vertical_SMD"
+			(at 193.04 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4943,7 +4710,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 193.04 97.79 0)
+			(at 193.04 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4951,52 +4718,31 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 193.04 97.79 0)
+		(property "Description" "Generic connector, double row, 02x02, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 193.04 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 				(hide yes)
 			)
-		)
-		(property "LCSC" "DNF"
-			(at 193.04 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "9a69e418-7553-46a5-a422-b475ed8ec374")
-		)
-		(pin "8"
-			(uuid "a211520c-6969-4ec7-9fa6-9a0c25f3ffcd")
-		)
-		(pin "3"
-			(uuid "2c860925-2755-454f-b778-8c7bb413b336")
-		)
-		(pin "6"
-			(uuid "27fa58d0-5914-4e23-9404-5875a188c807")
-		)
-		(pin "1"
-			(uuid "7548de9f-d7bc-4472-8059-164b720b0fed")
-		)
-		(pin "7"
-			(uuid "5f931255-f061-4eed-8580-078ddcb02ac4")
-		)
-		(pin "5"
-			(uuid "b5bb9acc-c1b3-4e47-a311-117f73151b7b")
 		)
 		(pin "4"
-			(uuid "ca47bb4a-031d-446a-885d-a0d41c9dd8df")
+			(uuid "05fbb6fd-f546-49d0-84fc-d331421dcb5d")
+		)
+		(pin "2"
+			(uuid "ba5b9e0b-44a4-47a5-9b30-0a374a339b36")
+		)
+		(pin "3"
+			(uuid "9694d4cc-993a-4736-9255-24f4a76f0e55")
+		)
+		(pin "1"
+			(uuid "30f8695f-211b-4420-8757-e2fdb7d6c575")
 		)
 		(instances
-			(project "LT6502"
+			(project ""
 				(path "/a2243a34-697c-4939-97f7-df548e421864/e86b2ea6-d99f-434f-aafb-2d5deecd7ca6"
-					(reference "J11")
+					(reference "J9")
 					(unit 1)
 				)
 			)
@@ -5063,6 +4809,120 @@
 			(project "LT6502"
 				(path "/a2243a34-697c-4939-97f7-df548e421864/e86b2ea6-d99f-434f-aafb-2d5deecd7ca6"
 					(reference "#PWR0192")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N4148W")
+		(at 125.73 86.36 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a091f2b4-6ebb-49fb-bbce-90fca29bb531")
+		(property "Reference" "D16"
+			(at 127.508 84.836 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "1N4148W"
+			(at 121.158 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-123"
+			(at 125.73 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.vishay.com/docs/85748/1n4148w.pdf"
+			(at 125.73 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "75V 0.15A Fast Switching Diode, SOD-123"
+			(at 125.73 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 125.73 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 125.73 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2099"
+			(at 125.73 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" ""
+			(at 125.73 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "ManufacturerPN" ""
+			(at 125.73 86.36 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "78d4bbc6-d3d6-4353-b6f1-ce5e5cdf427f")
+		)
+		(pin "2"
+			(uuid "5907a92f-2beb-4cfb-9415-a84fd480f84e")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/a2243a34-697c-4939-97f7-df548e421864/e86b2ea6-d99f-434f-aafb-2d5deecd7ca6"
+					(reference "D16")
 					(unit 1)
 				)
 			)
@@ -5520,101 +5380,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Diode:1N4148")
-		(at 125.73 86.36 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d240af55-c1fe-4122-9426-f4f5cc526b05")
-		(property "Reference" "D16"
-			(at 125.476 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1N4148"
-			(at 125.73 89.154 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
-			(at 125.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
-			(at 125.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "100V 0.15A standard switching diode, DO-35"
-			(at 125.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 125.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 125.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "DNF"
-			(at 125.73 86.36 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "2ec36c3a-471d-46bf-a012-1febf72ab5cd")
-		)
-		(pin "1"
-			(uuid "6dff49bb-0f27-4f48-811b-c3f693bd7cc1")
-		)
-		(instances
-			(project "LT6502"
-				(path "/a2243a34-697c-4939-97f7-df548e421864/e86b2ea6-d99f-434f-aafb-2d5deecd7ca6"
-					(reference "D16")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:+5V")
 		(at 209.55 72.39 0)
 		(mirror y)
@@ -5881,7 +5646,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 128.5748 175.26 0)
 			(effects
 				(font
@@ -5927,72 +5692,6 @@
 			(project "LT6502"
 				(path "/a2243a34-697c-4939-97f7-df548e421864/e86b2ea6-d99f-434f-aafb-2d5deecd7ca6"
 					(reference "C47")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 184.15 97.79 0)
-		(mirror y)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f24b8d49-d2f1-485c-b998-a41e2f16edb3")
-		(property "Reference" "#PWR0191"
-			(at 184.15 104.14 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 184.15 102.3525 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 184.15 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 184.15 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 184.15 97.79 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "454a9d86-35f7-4f9b-b9d4-97474168406a")
-		)
-		(instances
-			(project "LT6502"
-				(path "/a2243a34-697c-4939-97f7-df548e421864/e86b2ea6-d99f-434f-aafb-2d5deecd7ca6"
-					(reference "#PWR0191")
 					(unit 1)
 				)
 			)

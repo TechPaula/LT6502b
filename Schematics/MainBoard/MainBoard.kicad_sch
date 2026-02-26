@@ -5011,6 +5011,16 @@
 	)
 	(wire
 		(pts
+			(xy 388.62 182.88) (xy 392.43 182.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "028c032f-1eed-467a-87a5-6bdcec983b95")
+	)
+	(wire
+		(pts
 			(xy 50.8 189.23) (xy 53.34 189.23)
 		)
 		(stroke
@@ -8031,6 +8041,16 @@
 			(type default)
 		)
 		(uuid "b5b6ee04-f27d-4755-a8ad-dd90deb94cb1")
+	)
+	(wire
+		(pts
+			(xy 392.43 182.88) (xy 392.43 191.77)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6377cc3-f271-40c3-9c9c-853cca4e236b")
 	)
 	(wire
 		(pts
@@ -11268,6 +11288,28 @@
 			)
 		)
 	)
+	(global_label "nRES"
+		(shape input)
+		(at 388.62 182.88 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "76898db7-99c4-46a1-bd3b-e1a69f0f917a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 380.8573 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "nSLOW0"
 		(shape input)
 		(at 185.42 81.28 180)
@@ -13838,91 +13880,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C_Polarized")
-		(at 83.82 142.24 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3cb19a6f-15ed-4538-ac86-0e1608deacc0")
-		(property "Reference" "C59"
-			(at 83.82 136.906 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "250uF 16V"
-			(at 83.82 138.684 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_10x12.5"
-			(at 87.63 141.2748 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 83.82 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Polarized capacitor"
-			(at 83.82 142.24 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Mouser Part Number" "667-EEV-FK1V681Q"
-			(at 83.82 142.24 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC" "DNF"
-			(at 83.82 142.24 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "663dfa6a-00f4-4174-a082-ac5fbf76f73b")
-		)
-		(pin "2"
-			(uuid "7941d185-a8fb-4113-910b-debd53b12297")
-		)
-		(instances
-			(project "LT6502"
-				(path "/a2243a34-697c-4939-97f7-df548e421864"
-					(reference "C59")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 77.47 194.31 90)
 		(unit 1)
@@ -14342,6 +14299,82 @@
 			(project "LT6502"
 				(path "/a2243a34-697c-4939-97f7-df548e421864"
 					(reference "#PWR035")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 83.82 142.24 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "66281cbf-5db6-4dd5-9d89-32e4fa2ac72d")
+		(property "Reference" "C59"
+			(at 82.042 135.89 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100uF 10V Tant"
+			(at 87.884 137.922 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Capacitor_Tantalum_SMD:CP_EIA-7343-30_AVX-N"
+			(at 87.63 141.2748 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 83.82 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Polarized capacitor"
+			(at 83.82 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "DNP"
+			(at 83.82 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "64498d62-1651-48c4-89fa-28bbbc1c63ea")
+		)
+		(pin "2"
+			(uuid "7f317d77-84c8-4fd4-bf3f-2830610ed9e2")
+		)
+		(instances
+			(project "MainBoard"
+				(path "/a2243a34-697c-4939-97f7-df548e421864"
+					(reference "C59")
 					(unit 1)
 				)
 			)
@@ -14954,7 +14987,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 53.6448 269.24 0)
 			(effects
 				(font
@@ -15522,7 +15555,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 32.7152 269.24 0)
 			(effects
 				(font
@@ -16212,7 +16245,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 89.8652 269.24 0)
 			(effects
 				(font
@@ -16968,7 +17001,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 24.4348 269.24 0)
 			(effects
 				(font
@@ -18154,7 +18187,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 61.9252 269.24 0)
 			(effects
 				(font
@@ -19025,7 +19058,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
 			(at 81.5848 269.24 0)
 			(effects
 				(font
@@ -19626,6 +19659,16 @@
 					(size 1.27 1.27)
 				)
 				(justify left)
+			)
+		)
+		(pin "nRES" input
+			(at 392.43 191.77 90)
+			(uuid "7ca2195d-d441-494d-ad53-f5dfcca62596")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
 			)
 		)
 		(instances
