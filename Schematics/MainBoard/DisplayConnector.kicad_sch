@@ -2370,10 +2370,10 @@
 			(embedded_fonts no)
 		)
 	)
-	(text_box "Connector - 40FMN-BMT-A-TF\n   (1mm pitch, 40 pin, single side, \"normal\" type, 5.1mm tall, 3mm deep, 42mm wide\n\nDisplay\n   (1mm pitch, 40 pin, single side, bottom)"
+	(text_box "Connector - 40FMN-BMT-A-TF\n   (1mm pitch, 40 pin, single side, bottom, 5.1mm tall, 3mm deep, 42mm wide\n\nDisplay\n   (1mm pitch, 40 pin, single side, bottom)\n\nnote J5 IS REVERSED DUE TO CABLE"
 		(exclude_from_sim no)
-		(at 165.1 129.54 0)
-		(size 92.71 33.02)
+		(at 163.83 120.65 0)
+		(size 62.23 19.05)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -2439,16 +2439,48 @@
 		(uuid "fbf74f9f-dede-4caa-b049-08f6a8673e46")
 	)
 	(no_connect
+		(at 187.96 78.74)
+		(uuid "0589042e-0c84-4504-93da-4759a57d4305")
+	)
+	(no_connect
 		(at 187.96 88.9)
 		(uuid "1a9e94e4-e45e-4dc1-a382-e675f8f782b4")
+	)
+	(no_connect
+		(at 200.66 81.28)
+		(uuid "1b95517e-48b2-4df4-9483-347775e6577a")
+	)
+	(no_connect
+		(at 187.96 76.2)
+		(uuid "2843f1d4-f739-4f60-b4e2-e8542e7df8d1")
+	)
+	(no_connect
+		(at 187.96 83.82)
+		(uuid "3527a182-1ff3-48de-ab4c-71e64e51c961")
+	)
+	(no_connect
+		(at 187.96 81.28)
+		(uuid "3f1b0ecb-1e24-4865-a127-63edfc8df3aa")
 	)
 	(no_connect
 		(at 200.66 60.96)
 		(uuid "ad1500e2-9edc-4b40-a7da-7be80be31914")
 	)
 	(no_connect
+		(at 200.66 83.82)
+		(uuid "bcd9b92d-f78f-4b0a-a02b-fad55c60e408")
+	)
+	(no_connect
 		(at 200.66 88.9)
 		(uuid "c00fbb57-6fe4-43c6-bed4-9b0b205e84bf")
+	)
+	(no_connect
+		(at 200.66 78.74)
+		(uuid "cb93947a-db10-497e-98fc-f72a85727211")
+	)
+	(no_connect
+		(at 200.66 76.2)
+		(uuid "d5a22df2-d75c-42ce-87f4-0301d62da569")
 	)
 	(no_connect
 		(at 200.66 91.44)
@@ -2499,7 +2531,7 @@
 		(uuid "119de865-ecde-44fc-87ff-db347b7cc51e")
 	)
 	(bus_entry
-		(at 48.26 60.96)
+		(at 48.26 58.42)
 		(size 2.54 2.54)
 		(stroke
 			(width 0)
@@ -2697,16 +2729,6 @@
 		)
 		(uuid "026bf30b-351a-4b50-b9b3-66c74f2cc55e")
 	)
-	(bus
-		(pts
-			(xy 35.56 45.72) (xy 48.26 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0a1edd8c-157e-4bea-955b-bc54e0587fa7")
-	)
 	(wire
 		(pts
 			(xy 245.11 63.5) (xy 247.65 63.5)
@@ -2716,6 +2738,16 @@
 			(type default)
 		)
 		(uuid "0a3d2231-bded-468b-9dc7-dd4800fb1c86")
+	)
+	(wire
+		(pts
+			(xy 140.97 68.58) (xy 140.97 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0c70b9a3-2288-4b85-b00d-753ae68b0b0a")
 	)
 	(wire
 		(pts
@@ -2729,7 +2761,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 68.58) (xy 107.95 68.58)
+			(xy 115.57 66.04) (xy 107.95 66.04)
 		)
 		(stroke
 			(width 0)
@@ -2799,7 +2831,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 60.96) (xy 87.63 60.96)
+			(xy 80.01 68.58) (xy 87.63 68.58)
 		)
 		(stroke
 			(width 0)
@@ -2919,7 +2951,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 66.04) (xy 87.63 66.04)
+			(xy 80.01 63.5) (xy 87.63 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3046,6 +3078,26 @@
 			(type default)
 		)
 		(uuid "4a200f54-78e3-43e4-a31b-e787f0fff90a")
+	)
+	(wire
+		(pts
+			(xy 50.8 60.96) (xy 87.63 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4dff2cc3-a905-4e88-9fa5-00fb5b6c7a8d")
+	)
+	(wire
+		(pts
+			(xy 140.97 60.96) (xy 147.32 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "55144620-7650-4a2c-bf3d-5177a5b55566")
 	)
 	(wire
 		(pts
@@ -3177,6 +3229,16 @@
 		)
 		(uuid "6b400d11-4ac8-4697-a47e-65e9e6ef644f")
 	)
+	(bus
+		(pts
+			(xy 35.56 45.72) (xy 48.26 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6d24d4ce-af32-47b0-85d9-79558e6bfdee")
+	)
 	(wire
 		(pts
 			(xy 201.93 48.26) (xy 201.93 96.52)
@@ -3269,16 +3331,6 @@
 	)
 	(wire
 		(pts
-			(xy 107.95 60.96) (xy 147.32 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7a92a5c0-1b85-4caa-a8fb-c4b9ea89ef94")
-	)
-	(wire
-		(pts
 			(xy 157.48 68.58) (xy 187.96 68.58)
 		)
 		(stroke
@@ -3306,6 +3358,16 @@
 			(type default)
 		)
 		(uuid "7c2b6d2a-9e38-45b5-86bd-c87f74b22f5e")
+	)
+	(wire
+		(pts
+			(xy 107.95 68.58) (xy 140.97 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e8ac25d-8ae5-4ef2-96a7-6d6190567ae1")
 	)
 	(wire
 		(pts
@@ -3339,7 +3401,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 68.58) (xy 87.63 68.58)
+			(xy 80.01 66.04) (xy 87.63 66.04)
 		)
 		(stroke
 			(width 0)
@@ -3399,7 +3461,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 66.04) (xy 107.95 66.04)
+			(xy 115.57 63.5) (xy 107.95 63.5)
 		)
 		(stroke
 			(width 0)
@@ -3499,7 +3561,7 @@
 	)
 	(wire
 		(pts
-			(xy 115.57 63.5) (xy 107.95 63.5)
+			(xy 115.57 60.96) (xy 107.95 60.96)
 		)
 		(stroke
 			(width 0)
@@ -3579,7 +3641,7 @@
 	)
 	(bus
 		(pts
-			(xy 48.26 60.96) (xy 48.26 45.72)
+			(xy 48.26 58.42) (xy 48.26 45.72)
 		)
 		(stroke
 			(width 0)
@@ -3686,16 +3748,6 @@
 			(type default)
 		)
 		(uuid "d2855077-b362-43c2-8e18-aac7cf49198e")
-	)
-	(wire
-		(pts
-			(xy 50.8 63.5) (xy 87.63 63.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d2ce25c6-9f8e-47f7-a2fa-23de1f5cbe24")
 	)
 	(wire
 		(pts
@@ -4038,7 +4090,7 @@
 		(uuid "e1b41cc4-8b0b-4872-b869-3d099069022c")
 	)
 	(label "A0"
-		(at 63.5 63.5 180)
+		(at 63.5 60.96 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4133,7 +4185,7 @@
 	)
 	(global_label "3V3_nINT"
 		(shape input)
-		(at 115.57 68.58 0)
+		(at 115.57 66.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4143,7 +4195,7 @@
 		)
 		(uuid "38aae148-4afb-4fcd-a474-69a6c597d074")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 127.0823 68.58 0)
+			(at 127.0823 66.04 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4199,7 +4251,7 @@
 	)
 	(global_label "nWAIT"
 		(shape input)
-		(at 115.57 66.04 0)
+		(at 115.57 63.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4209,7 +4261,7 @@
 		)
 		(uuid "9ffd4b0a-55af-4261-8946-83babeba250a")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 123.8166 66.04 0)
+			(at 123.8166 63.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4221,7 +4273,7 @@
 	)
 	(global_label "3V3_RS"
 		(shape output)
-		(at 115.57 63.5 0)
+		(at 115.57 60.96 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -4231,7 +4283,7 @@
 		)
 		(uuid "b3f3958a-e621-4b00-8bd1-de1b12dbbfde")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 125.5099 63.5 0)
+			(at 125.5099 60.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4397,7 +4449,7 @@
 	)
 	(hierarchical_label "DISP_nINT"
 		(shape output)
-		(at 80.01 68.58 180)
+		(at 80.01 66.04 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4430,7 +4482,7 @@
 	)
 	(hierarchical_label "DISP_nWAIT"
 		(shape output)
-		(at 80.01 66.04 180)
+		(at 80.01 63.5 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -4485,7 +4537,7 @@
 	)
 	(hierarchical_label "DISP_nRES"
 		(shape input)
-		(at 80.01 60.96 180)
+		(at 80.01 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5122,16 +5174,15 @@
 	)
 	(symbol
 		(lib_id "Connector_Generic:Conn_02x20_Odd_Even")
-		(at 193.04 71.12 0)
+		(at 195.58 73.66 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "3e893bf0-3359-489c-9414-94dbeec2a932")
 		(property "Reference" "J5"
-			(at 194.31 41.91 0)
+			(at 194.31 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5139,7 +5190,7 @@
 			)
 		)
 		(property "Value" "Conn_02x20_Odd_Even"
-			(at 194.31 44.45 0)
+			(at 194.31 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5147,7 +5198,7 @@
 			)
 		)
 		(property "Footprint" "FFC3B07-40-T:GCT_FFC3B07-40-T"
-			(at 193.04 71.12 0)
+			(at 195.58 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5156,7 +5207,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 193.04 71.12 0)
+			(at 195.58 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5165,7 +5216,7 @@
 			)
 		)
 		(property "Description" "Generic connector, double row, 02x20, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 193.04 71.12 0)
+			(at 195.58 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5174,7 +5225,7 @@
 			)
 		)
 		(property "LCSC" "DNF"
-			(at 193.04 71.12 0)
+			(at 195.58 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
