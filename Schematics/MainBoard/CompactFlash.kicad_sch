@@ -3931,7 +3931,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 92.71 68.58 0)
 			(effects
 				(font
@@ -3962,7 +3962,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "57309fc6-efb2-499a-9663-8eea2bf93c0e")
 		(property "Reference" "J8"
@@ -4398,7 +4398,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "9d81f606-54eb-4cc6-8037-c10d661de065")
 		(property "Reference" "R75"
 			(at 108.204 85.344 90)
@@ -4928,7 +4928,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C2296"
 			(at 209.55 92.71 0)
 			(effects
 				(font

@@ -9706,7 +9706,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C25917"
 			(at 367.03 185.42 90)
 			(effects
 				(font
@@ -9825,7 +9825,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "08804df4-0a06-45c3-b335-64a78a53f37b")
 		(property "Reference" "J4"
 			(at 283.21 250.444 0)
@@ -9911,7 +9911,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "08b66261-1f28-4b77-9df3-527ab3173f04")
 		(property "Reference" "R95"
 			(at 282.956 228.6 90)
@@ -9955,7 +9955,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "DNF"
 			(at 281.94 233.68 90)
 			(effects
 				(font
@@ -10113,7 +10113,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 44.45 87.63 0)
 			(effects
 				(font
@@ -11059,7 +11059,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "266c93d9-89af-4563-8dc9-1e5d4f435a9c")
 		(property "Reference" "L1"
@@ -11814,7 +11814,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25905"
+		(property "LCSC" "DNF"
 			(at 123.19 111.76 0)
 			(effects
 				(font
@@ -11901,7 +11901,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C84256"
 			(at 306.07 201.93 0)
 			(effects
 				(font
@@ -12117,7 +12117,7 @@
 				)
 			)
 		)
-		(property "LCSC" "???"
+		(property "LCSC" "C25756"
 			(at 160.02 231.14 90)
 			(effects
 				(font
@@ -12302,7 +12302,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C2296"
 			(at 359.41 185.42 0)
 			(effects
 				(font
@@ -13752,7 +13752,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C2933084"
 			(at 176.53 241.3 90)
 			(effects
 				(font
@@ -13827,7 +13827,7 @@
 				)
 			)
 		)
-		(property "LCSC" "???"
+		(property "LCSC" "C25750"
 			(at 168.91 236.22 90)
 			(effects
 				(font
@@ -15114,7 +15114,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 250.19 36.83 0)
 			(effects
 				(font
@@ -15190,7 +15190,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNP"
+		(property "LCSC" "C49332976"
 			(at 389.89 129.54 0)
 			(effects
 				(font
@@ -16839,7 +16839,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C11702"
+		(property "LCSC" "C21190"
 			(at 109.22 52.07 0)
 			(effects
 				(font
@@ -17143,7 +17143,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C25905"
+		(property "LCSC" "DNF"
 			(at 129.54 111.76 0)
 			(effects
 				(font
@@ -17460,7 +17460,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "cd895106-b595-453c-959b-261b756add7a")
 		(property "Reference" "S1"
 			(at 270.51 148.59 0)
@@ -18470,7 +18470,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 132.08 212.09 0)
 			(effects
 				(font
@@ -18782,7 +18782,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "e735304b-8c6a-4c53-8745-102cc0b34ff4")
 		(property "Reference" "J3"
@@ -19364,7 +19364,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNP"
+		(property "LCSC" "C49332976"
 			(at 299.72 130.81 0)
 			(effects
 				(font
@@ -20074,7 +20074,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "fb7a899d-737e-4180-b141-8dfce9aafbe2")
 		(property "Reference" "J2"
@@ -20211,7 +20211,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C2762047"
 			(at 355.6 119.38 90)
 			(effects
 				(font
