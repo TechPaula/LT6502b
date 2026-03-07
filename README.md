@@ -23,6 +23,5 @@ Features improved on since previous version;
 
 
 ## Updates
-2026-03-07 - Case coming together, currently 31mm in height, vs the 70mm of the previous version)
-
-2026-03-01 - PCB sent for manufacture
+* 2026-03-07 - Case coming together, currently 31mm in height, vs the 70mm of the previous version)
+* 2026-03-01 - PCB sent for manufacture
