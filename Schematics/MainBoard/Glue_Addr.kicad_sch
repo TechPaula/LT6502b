@@ -6184,7 +6184,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 138.43 182.88 0)
 			(effects
 				(font
@@ -7433,7 +7433,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C2286"
 			(at 30.48 90.17 90)
 			(effects
 				(font
@@ -7464,7 +7464,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "360f4659-8ecc-4989-be67-69bb73efb8f0")
 		(property "Reference" "IC1"
 			(at 178.308 118.618 90)
@@ -8017,7 +8017,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "41c3ea52-2a1e-4d43-af68-3817077d7a56")
 		(property "Reference" "J1"
@@ -8375,7 +8375,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 132.08 182.88 0)
 			(effects
 				(font
@@ -8520,7 +8520,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 160.02 182.88 0)
 			(effects
 				(font
@@ -8755,7 +8755,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 105.41 182.88 0)
 			(effects
 				(font
@@ -8834,7 +8834,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1581"
+		(property "LCSC" "C307331"
 			(at 111.76 182.88 0)
 			(effects
 				(font
@@ -9243,7 +9243,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 77.47 182.88 0)
 			(effects
 				(font
@@ -9520,7 +9520,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 62.23 182.88 0)
 			(effects
 				(font
@@ -10157,7 +10157,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 83.82 182.88 0)
 			(effects
 				(font
@@ -10958,7 +10958,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 166.37 182.88 0)
 			(effects
 				(font

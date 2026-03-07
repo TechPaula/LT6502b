@@ -12826,7 +12826,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C14323"
 			(at 328.93 58.42 0)
 			(effects
 				(font
@@ -13275,7 +13275,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "2a865a8f-7bbf-40b5-9d81-dd91d27df374")
 		(property "Reference" "U2"
@@ -14102,7 +14102,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNP"
+		(property "LCSC" "C49332976"
 			(at 83.82 142.24 0)
 			(effects
 				(font
@@ -14760,7 +14760,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 54.61 265.43 0)
 			(effects
 				(font
@@ -15328,7 +15328,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 31.75 265.43 0)
 			(effects
 				(font
@@ -16018,7 +16018,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 88.9 265.43 0)
 			(effects
 				(font
@@ -16774,7 +16774,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 25.4 265.43 0)
 			(effects
 				(font
@@ -16862,7 +16862,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C14323"
 			(at 328.93 119.38 0)
 			(effects
 				(font
@@ -17114,7 +17114,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d807554e-d768-4528-89c4-4e99b11c6f87")
 		(property "Reference" "S2"
 			(at 27.178 183.134 0)
@@ -17462,7 +17462,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "de1c22ef-612b-4b13-ad87-36cb980f337b")
 		(property "Reference" "U5"
 			(at 337.185 158.75 0)
@@ -17960,7 +17960,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 60.96 265.43 0)
 			(effects
 				(font
@@ -18316,7 +18316,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "f1adfc9e-5c3a-4a3e-8463-a737d0e2b0ba")
 		(property "Reference" "U1"
@@ -18831,7 +18831,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 82.55 265.43 0)
 			(effects
 				(font

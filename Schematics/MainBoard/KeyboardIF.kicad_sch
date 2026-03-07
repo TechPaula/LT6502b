@@ -5602,7 +5602,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 17.78 102.87 0)
 			(effects
 				(font
@@ -5699,7 +5699,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 17.78 127 0)
 			(effects
 				(font
@@ -6058,7 +6058,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 17.78 78.74 0)
 			(effects
 				(font
@@ -6737,7 +6737,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 215.9 107.95 0)
 			(effects
 				(font
@@ -6833,7 +6833,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 233.68 107.95 0)
 			(effects
 				(font
@@ -7175,7 +7175,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 220.98 107.95 0)
 			(effects
 				(font
@@ -7530,7 +7530,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 226.06 107.95 0)
 			(effects
 				(font
@@ -7624,7 +7624,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25741"
 			(at 149.86 63.5 0)
 			(effects
 				(font
@@ -7721,7 +7721,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 78.74 184.15 0)
 			(effects
 				(font
@@ -7863,7 +7863,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 231.14 107.95 0)
 			(effects
 				(font
@@ -8025,7 +8025,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 134.62 181.61 0)
 			(effects
 				(font
@@ -8412,7 +8412,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 218.44 107.95 0)
 			(effects
 				(font
@@ -8603,7 +8603,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "bae282e4-264f-45b0-9934-53d184593fb8")
 		(property "Reference" "J7"
 			(at 114.3 163.83 0)
@@ -8768,7 +8768,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 228.6 107.95 0)
 			(effects
 				(font
@@ -8931,7 +8931,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 223.52 107.95 0)
 			(effects
 				(font
@@ -9156,7 +9156,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25744"
 			(at 134.62 168.91 0)
 			(effects
 				(font
@@ -9641,7 +9641,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 168.91 29.21 0)
 			(effects
 				(font
@@ -9868,7 +9868,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 173.99 97.79 0)
 			(effects
 				(font
@@ -10232,7 +10232,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 17.78 54.61 0)
 			(effects
 				(font

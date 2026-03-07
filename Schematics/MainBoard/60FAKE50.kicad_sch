@@ -2382,7 +2382,7 @@
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "1b26da87-1206-4e47-a317-0e19ec33849c")
 		(property "Reference" "JP6"
@@ -2423,6 +2423,15 @@
 		)
 		(property "Description" "Jumper, 3-pole, pins 1+2 closed/bridged"
 			(at 81.28 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC" "DNF"
+			(at 81.28 115.57 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2568,7 +2577,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 137.16 127 0)
 			(effects
 				(font
@@ -2839,7 +2848,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C25900"
 			(at 102.87 104.14 90)
 			(effects
 				(font
@@ -3080,7 +3089,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C22367835"
+		(property "LCSC" "C96123"
 			(at 231.14 67.945 0)
 			(effects
 				(font
@@ -3508,7 +3517,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 106.68 69.85 0)
 			(effects
 				(font
@@ -3587,7 +3596,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C49678"
+		(property "LCSC" "C307331"
 			(at 242.57 69.85 0)
 			(effects
 				(font

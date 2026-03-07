@@ -3352,7 +3352,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "3855d191-cc24-444f-a3b8-9bdd18fd6b8e")
 		(property "Reference" "J6"
 			(at 186.055 52.07 0)
@@ -3397,7 +3397,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNP"
+		(property "LCSC" "DNF"
 			(at 184.15 43.18 0)
 			(effects
 				(font
@@ -3785,7 +3785,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25792"
 			(at 58.42 154.94 90)
 			(effects
 				(font
@@ -3860,7 +3860,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C11702"
 			(at 163.83 50.8 90)
 			(effects
 				(font
@@ -4501,7 +4501,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNP"
+		(property "LCSC" "C49332976"
 			(at 222.25 80.01 0)
 			(effects
 				(font
@@ -4578,7 +4578,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C21120"
 			(at 110.49 40.64 0)
 			(effects
 				(font
@@ -4655,7 +4655,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 45.72 27.94 0)
 			(effects
 				(font
@@ -4795,7 +4795,7 @@
 				)
 			)
 		)
-		(property "LCSC" ""
+		(property "LCSC" "C11702"
 			(at 162.56 30.48 90)
 			(effects
 				(font
@@ -4826,7 +4826,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ac316e00-23fe-4c0f-b5a1-acc9ce7046a3")
 		(property "Reference" "LS1"
@@ -5336,7 +5336,7 @@
 				)
 			)
 		)
-		(property "LCSC" "DNF"
+		(property "LCSC" "C25792"
 			(at 66.04 133.35 90)
 			(effects
 				(font
@@ -5413,7 +5413,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C113803"
+		(property "LCSC" "C307331"
 			(at 124.46 80.01 0)
 			(effects
 				(font
@@ -5555,7 +5555,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "DNP"
+		(property "LCSC" "C49332976"
 			(at 222.25 92.71 0)
 			(effects
 				(font
@@ -5633,7 +5633,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC" "C1622"
+		(property "LCSC" "C82219"
 			(at 187.96 97.79 0)
 			(effects
 				(font
