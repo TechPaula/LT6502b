@@ -21,6 +21,11 @@ Features improved on since previous version;
 * USB charge and data on single USB-C connector
 * Single PCB for keyboard and logic/processor
 
+## Images
+2026-03-07 - Render of case design in progress
+![Render of case, not yet finished](https://github.com/TechPaula/LT6502b/blob/main/Images/LT6502b_Assembly_2026-Mar-07_08-01_noHinge.png?raw=true?raw=true)
+
+
 
 ## Updates
 * 2026-03-07 - Case coming together, currently 31mm in height, vs the 70mm of the previous version)
