@@ -3144,6 +3144,46 @@
 		)
 		(uuid "835b23b5-0398-4377-8e55-8c4947e8b733")
 	)
+	(text_box "FT_nTXF AND FT_nTXE are SWAPPED in top level <DOH>"
+		(exclude_from_sim no)
+		(at 250.19 49.53 0)
+		(size 19.05 10.16)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "1769d7ea-7dbb-4520-9f65-e45fa9213975")
+	)
+	(text_box "CF_nCS AND CF_nRES are SWAPPED in top level <DOH>"
+		(exclude_from_sim no)
+		(at 251.46 110.49 0)
+		(size 19.05 10.16)
+		(margins 0.9525 0.9525 0.9525 0.9525)
+		(stroke
+			(width 0)
+			(type solid)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "2f50e996-c369-4c31-83be-79e26e103cf7")
+	)
 	(junction
 		(at 247.65 63.5)
 		(diameter 0)
