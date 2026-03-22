@@ -53,8 +53,8 @@ Pin 33 = !VIA_nCS;
 
 
 /* Compact Flash */
-Pin 28 = !CF_nRES;       /* OUT, was nCS, but I swapped pins on the schematic, DOH! */
-Pin 29 = !CF_nCS;        /* OUT, was nRES, but I swapped pins on the schematic, DOH! */
+Pin 29 = !CF_nRES;       /* OUT, was nCS, but I swapped pins on the schematic, DOH! */
+Pin 28 = !CF_nCS;        /* OUT, was nRES, but I swapped pins on the schematic, DOH! */
 
 
 /* Keyboard Serial port & MODEM via atmega644 */
@@ -157,7 +157,7 @@ Q1.D = !PHI2 & !(DISP_nCS # FT_CS)
        # PHI2 & !Q1 & Q0
        # PHI2 & Q1 & !Q0;
 
-Q2.D = !PHI2 & !(ACIA_nCS # SID_nCS # MODEM_nCS)
+Q2.D = !PHI2 & !(SID_nCS  # FT_CS # MODEM_nCS # ACIA_nCS)
        # PHI2 & Q2 & !Q1
        # PHI2 & Q2 & !Q0	
        # PHI2 & !Q2 & Q1 & Q0;
@@ -175,7 +175,7 @@ PHI2.D = !PHI2
 
 
 /* FT245 Serial port 0xBFF0 - 0xBFFF */			
-FT_CS = PHI2 & Address:[BFF0..BFFF];
+FT_CS = Address:[BFF0..BFFF];
 
 RD_FT = PHI2 & FT_CS & A0 &  RnW;		/* 0xBFF1 */
 WR_FT = PHI2 & FT_CS & A0 & !RnW;		/* 0xBFF1 */ 
@@ -186,11 +186,11 @@ D0 = !RXF;
 D1 = !TXE;			
 
 
-/* Keyboard ACIA - 0xBFE0 - 0xBFEF */
-ACIA_nCS = PHI2 & Address:[BFE0..BFEF];
+/* Keyboard ACIA (ATNEGA644)- 0xBFE0 - 0xBFEF */
+ACIA_nCS = Address:[BFE0..BFEF];
  
 /* Display 0xBFD0 - 0xBFDF */
-DISP_nCS = PHI2 & Address:[BFD0..BFDF];
+DISP_nCS = Address:[BFD0..BFDF];
 DISP_DATA_EN = DISP_nCS & !A1;
 DISP_E = DISP_nCS & PHI2 & !Q0 & !A1;
 DISP_BL = 'b'1;			/* toggling this causes board resets */
@@ -208,7 +208,7 @@ CF_nRES = RESET;
 
 
 /* Beeper, a simple SR latch for now - 0xBFA0 - 0xBFAF */
-BEEP_CS = PHI2 & Address:[BFA0..BFAF];
+BEEP_CS = Address:[BFA0..BFAF];
 
 BEEP_S = D2 & BEEP_CS;
 BEEP_R = !D2 & BEEP_CS;
@@ -216,27 +216,17 @@ BEEPER =  (BEEPER & !BEEP_R) # BEEP_S;
 
 
 /* MODEM */
-MODEM_nCS = 'b'1;
+MODEM_nCS = Address:[BF20..BF2F]; /*'b'1;*/
 MODEM_nRES = RESET;
 KEYMOD_RnW = RnW;      /* needed for both keyboard and Modem */
 
 /* SID */
-SID_nCS = 'b'1;
-
-/* LED brightness */
-LED_PWM = 'b'0;
+SID_nCS = Address:[BF00..BF1F]; /*'b'1;*/
 
 
-/* ROM 0xC000 - 0xFFFF */
-ROM_nR  = A15 & A14;   /* ROM Read address */
-ROM_nCS = 'b'1;        /* ROM chip select always active */
-
-
-/* RAM bank 0 0x0000 - 0x7FFF */			
-RAM_nCS0 = !A15;	
-
-/* RAM bank 1 0x8000 - 0xBDFF */
-RAM_nCS1 = PHI2 & Address:[8000..BEFF];
+/* RAM */
+RAM_nCS0 = Address:[0000..7FFF];
+RAM_nCS1 = Address:[8000..BEFF];
 
 
 /* READ AND WRITE LINES */
@@ -244,10 +234,20 @@ RW = PHI2 & !RnW & !FT_CS ;
 RD = PHI2 &  RnW & !FT_CS;
 
 
+/* ROM 0xC000 - 0xFFFF */
+ROM_nR = Address:[C000..FFFF];
+ROM_nCS = 'b'1;        /* ROM chip select always active */
+
+
+/* LED brightness */
+LED_PWM = CLK; /*'b'0;*/
+
+
+
 
 /* system wide logic */
 CLK_OUT = CLK;
-LED = CLK;              /* Used for debugging */
+LED = !PHI2;              /* Used for debugging */
 
 
 

@@ -1,9 +1,9 @@
 CHIP "D:\REPOSITORIES\LT6502B\SOFTWARE\CPLD\LT6502B_GLUE" ASSIGNED TO AN TQFP100
+Q2					: 604
 DISP_E					: 100
 DISP_nRES					: 99
 DISP_nCS					: 98
 MODEM_nCS					: 97
-Q2					: 610
 SID_nCS					: 96
 Q1					: 612
 LED					: 94
@@ -32,8 +32,8 @@ RW					: 36
 VIA_nCS					: 33
 MODEM_nRES					: 31
 LED_PWM					: 30
-CF_nCS					: 29
-CF_nRES					: 28
+CF_nRES					: 29
+CF_nCS					: 28
 DISP_DATA_EN					: 27
 ROM_nR					: 45
 ROM_nCS					: 46

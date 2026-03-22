@@ -2,11 +2,11 @@ CHIP "D:\REPOSITORIES\LT6502B\SOFTWARE\CPLD\LT6502B_GLUE"
 BEGIN
 
     DEVICE = "TQFP100";
+    "Q2"                                      : NODE_NUM = 604 ;
     "DISP_E"                                  : OUTPUT_PIN = 100 ;
     "DISP_nRES"                               : OUTPUT_PIN = 99 ;
     "DISP_nCS"                                : OUTPUT_PIN = 98 ;
     "MODEM_nCS"                               : OUTPUT_PIN = 97 ;
-    "Q2"                                      : NODE_NUM = 610 ;
     "SID_nCS"                                 : OUTPUT_PIN = 96 ;
     "Q1"                                      : NODE_NUM = 612 ;
     "LED"                                     : OUTPUT_PIN = 94 ;
@@ -35,8 +35,8 @@ BEGIN
     "VIA_nCS"                                 : OUTPUT_PIN = 33 ;
     "MODEM_nRES"                              : OUTPUT_PIN = 31 ;
     "LED_PWM"                                 : OUTPUT_PIN = 30 ;
-    "CF_nCS"                                  : OUTPUT_PIN = 29 ;
-    "CF_nRES"                                 : OUTPUT_PIN = 28 ;
+    "CF_nRES"                                 : OUTPUT_PIN = 29 ;
+    "CF_nCS"                                  : OUTPUT_PIN = 28 ;
     "DISP_DATA_EN"                            : OUTPUT_PIN = 27 ;
     "ROM_nR"                                  : OUTPUT_PIN = 45 ;
     "ROM_nCS"                                 : OUTPUT_PIN = 46 ;

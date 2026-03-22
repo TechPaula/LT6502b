@@ -5,7 +5,7 @@
   {Program "CUPL(WM) Version 5.0a"}
   {DBtype "Schematic"}
   {DBvrev 1.01}
-  {DBtime "Sun Mar 22 09:43:33 2026 "}
+  {DBtime "Sun Mar 22 11:53:21 2026 "}
   {DBunit "MIL"}
   {DBgrid 10}
   {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
@@ -66,8 +66,8 @@
    {P RESET' {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
    {P DISP_BL {Pt "I/O"}{Lq 0}{Ploc 360 20}}
    {P DISP_DAT {Pt "I/O"}{Lq 0}{Ploc 360 40}}
-   {P CF_NRES' {Pt "I/O"}{Lq 0}{Ploc 360 60}}
-   {P CF_NCS' {Pt "I/O"}{Lq 0}{Ploc 360 80}}
+   {P CF_NCS' {Pt "I/O"}{Lq 0}{Ploc 360 60}}
+   {P CF_NRES' {Pt "I/O"}{Lq 0}{Ploc 360 80}}
    {P LED_PWM {Pt "I/O"}{Lq 0}{Ploc 360 100}}
    {P MODEM_NR' {Pt "I/O"}{Lq 0}{Ploc 360 120}}
    {P VIA_NCS' {Pt "I/O"}{Lq 0}{Ploc 360 140}}
@@ -282,8 +282,8 @@
    [Tj "RC"]
    {T "DISP_BL" 320 20}
    {T "DISP_DAT" 320 40}
-   {T "CF_NRES'" 320 60}
-   {T "CF_NCS'" 320 80}
+   {T "CF_NCS'" 320 60}
+   {T "CF_NRES'" 320 80}
    {T "LED_PWM" 320 100}
    {T "MODEM_NR'" 320 120}
    {T "VIA_NCS'" 320 140}
@@ -396,9 +396,9 @@
    }
    {N DISP_DAT
    }
-   {N CF_NRES'
-   }
    {N CF_NCS'
+   }
+   {N CF_NRES'
    }
    {N LED_PWM
    }

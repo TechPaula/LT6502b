@@ -17,8 +17,8 @@ PIN   8 =  A14
 PIN   7 =  A15 
 PIN  77 = !ACIA_nCS 
 PIN  92 =  BEEPER 
-PIN  29 = !CF_nCS 
-PIN  28 = !CF_nRES 
+PIN  28 = !CF_nCS 
+PIN  29 = !CF_nRES 
 PIN  87 =  CLK 
 PIN  83 =  CLK_OUT 
 PIN  60 =  D0 
@@ -67,11 +67,10 @@ FIELD Address = A15,A14,A13,A12,A11,A10,A9,A8,A7,A6,A5,A4,A3,A2,A1,A0
 
 %EQUATION
 ACIA_nCS =>
-    !A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+    !A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
 
 BEEPER =>
     BEEPER & D2
-  # BEEPER & !PHI2
   # !A15 & BEEPER
   # A14 & BEEPER
   # !A13 & BEEPER
@@ -84,16 +83,16 @@ BEEPER =>
   # A6 & BEEPER
   # !A5 & BEEPER
   # A4 & BEEPER
-  # !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & D2 & PHI2
+  # !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & D2
 
 BEEP_CS =>
-    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
 
 BEEP_R =>
-    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & !D2 & PHI2
+    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & !D2
 
 BEEP_S =>
-    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & D2 & PHI2
+    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & D2
 
 CF_nCS =>
     A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
@@ -108,13 +107,13 @@ D0 =>
     !RXF
 
 D0.oe  =>
-    !A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2 & RnW
+    !A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & RnW
 
 D1 =>
     !TXE
 
 D1.oe  =>
-    !A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2 & RnW
+    !A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & RnW
 
 D2 =>
     DISP_nWT
@@ -132,25 +131,25 @@ DISP_E =>
     !A1 & DISP_nCS & PHI2 & !Q0
 
 DISP_nCS =>
-    A4 & !A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+    A4 & !A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
 
 DISP_nRES =>
     RESET
 
 FT_CS =>
-    A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+    A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
 
 KEYMOD_RnW =>
     RnW
 
 LED =>
-    CLK
+    !PHI2
 
 LED_PWM =>
-    0 
+    CLK
 
 MODEM_nCS =>
-    1 
+    !A4 & A5 & !A6 & !A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
 
 MODEM_nRES =>
     RESET
@@ -178,7 +177,18 @@ Q0.ck  =>
     CLK
 
 Q1.d  =>
-    !DISP_nCS & !PHI2
+    !A15 & !DISP_nCS & !PHI2
+  # A14 & !DISP_nCS & !PHI2
+  # !A13 & !DISP_nCS & !PHI2
+  # !A12 & !DISP_nCS & !PHI2
+  # !A11 & !DISP_nCS & !PHI2
+  # !A10 & !DISP_nCS & !PHI2
+  # !A9 & !DISP_nCS & !PHI2
+  # !A8 & !DISP_nCS & !PHI2
+  # !A7 & !DISP_nCS & !PHI2
+  # !A6 & !DISP_nCS & !PHI2
+  # !A4 & !DISP_nCS & !PHI2
+  # !A5 & !DISP_nCS & !PHI2
   # PHI2 & Q0 & !Q1
   # PHI2 & !Q0 & Q1
 
@@ -189,7 +199,18 @@ Q1.ck  =>
     CLK
 
 Q2.d  =>
-    !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+    !A15 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # A14 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A13 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A12 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A11 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A10 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A9 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A8 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A7 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A6 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A5 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # !A4 & !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
   # PHI2 & !Q1 & Q2
   # PHI2 & !Q0 & Q2
   # PHI2 & Q0 & Q1 & !Q2
@@ -204,14 +225,14 @@ RAM_nCS0 =>
     !A15
 
 RAM_nCS1 =>
-    !A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
-  # !A10 & A12 & !A14 & A15 & PHI2
-  # !A11 & !A12 & !A14 & A15 & PHI2
-  # A9 & A10 & A11 & A12 & !A13 & !A14 & A15 & PHI2
-  # A10 & !A11 & A12 & !A14 & A15 & PHI2
-  # !A10 & A11 & !A12 & !A14 & A15 & PHI2
-  # A9 & A10 & A11 & !A12 & !A14 & A15 & PHI2
-  # !A9 & A10 & A11 & !A14 & A15 & PHI2
+    !A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
+  # !A10 & A12 & !A14 & A15
+  # !A11 & !A12 & !A14 & A15
+  # A9 & A10 & A11 & A12 & !A13 & !A14 & A15
+  # A10 & !A11 & A12 & !A14 & A15
+  # !A10 & A11 & !A12 & !A14 & A15
+  # !A9 & A10 & A11 & !A14 & A15
+  # A9 & A10 & A11 & !A12 & !A14 & A15
 
 RD =>
     !A15 & PHI2 & RnW
@@ -251,7 +272,7 @@ RW =>
   # !A5 & PHI2 & !RnW
 
 SID_nCS =>
-    1 
+    !A5 & !A6 & !A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
 
 VIA_nCS =>
     !A4 & !A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
