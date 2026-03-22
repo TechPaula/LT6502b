@@ -1,8 +1,9 @@
 ; Heavily edited to work with the LT6502 project
-;	https://github.com/TechPaula/LT6502
+;	https://github.com/TechPaula/LT6502B
 ;
-; TODO - Add cursor move command  
-; TODO - Add, if possible, more versatile beep, something with more pitch range and length?
+; TODO - add in new screen
+; TODO - Add in SID
+
 
 	.feature labels_without_colons
 	.feature force_range
@@ -158,7 +159,8 @@ LAB_stlp
 	DEY					; decrement index/count
 	BNE	LAB_stlp		; loop if more to do
 
-; set up 65c51
+			; TODO re-enable this
+; set up 65c51  -- This will be for the keyboard, now via ATmega644
 ;    STA A_res       ; soft reset (value not important)
 ;    LDA #$0B        ; set specific modes and functions
     	            ; no parity, no echo, no Tx interrupt
@@ -168,7 +170,7 @@ LAB_stlp
 ;    STA A_ctl       ; set control register
 
 	JSR PWR_BEEP_LOW	; power beep
-	JSR DISP_INIT		; initialise screen
+	JSR DISP_INIT		; initialise screen ; TODO re-enable this
 	JSR PWR_BEEP_HIGH	; beep after display init
 
 	; other bits of system init
@@ -214,7 +216,7 @@ LAB_signon				; now do the signon message, Y = $00 here
 	BNE	LAB_signon		; loop, branch always
 
 KYB_msg
-	JSR KYB_cwmmsg
+;	JSR KYB_cwmmsg
 
 LAB_nokey
 	JSR	V_INPT			; call scan input device
@@ -338,6 +340,7 @@ KEYB_NoData
 ; display driver for the LT6502 project using the RA8875 driver
 ; the display is set to 800x480 pixels
 DISP_INIT
+	RTS		; TODO fix this for new display
 		; write to reg 0 and read back driver chip number
 	LDA #$00
 	STA DISP_RG
@@ -348,7 +351,6 @@ DISP_INIT
 	JMP DISP_ERR
 
 DISP_OK	
-
 	; 56 bytes in our initialisation array
 	LDX #$00
 DISP_initloop
@@ -378,6 +380,8 @@ DISP_ERR				; Show error message
 	RTS
 
 DISP_CLR_SCREEN			; Fills the screen with black
+	RTS		; TODO fix this for new display
+
 	PHA
 	PHX
 	PHY
@@ -401,6 +405,8 @@ DISP_fillcomp
 	JSR DISP_CHK_BUSY
 
 DISP_resetxy
+	RTS		; TODO fix this for new display
+
 	LDA #$00			; reset current coloumn and row
 	STA DISP_ccol
 	STA DISP_crow
@@ -424,7 +430,7 @@ DISP_MOVE_CURSOR
 	TXA
 	STA DISP_crow
 
-	JSR DISP_CURSOR_SETXY
+;	JSR DISP_CURSOR_SETXY ; TODO fix this for new display
 
 	PLY
 	PLX
@@ -433,6 +439,8 @@ DISP_MOVE_CURSOR
 
 
 DISP_CLS
+	RTS		; TODO fix this for new display
+
 	JSR DISP_CLR_SCREEN	
 	JSR DISP_TEXT_MODE
 
@@ -441,6 +449,8 @@ DISP_CLS
 	RTS
 
 DISP_TEXT_MODE
+	RTS		; TODO fix this for new display
+
 	PHA
 	PHX
 	PHY
@@ -476,10 +486,10 @@ DISP_TEXT_MODE
 
 DISP_GRAPHICS_MODE
 	LDA #$40
-	STA DISP_RG
+;	STA DISP_RG			; TODO fix this for new display
 	LDA #$00
-	STA DISP_DT
-	JSR DISP_CHK_BUSY
+;	STA DISP_DT			; TODO fix this for new display
+;	JSR DISP_CHK_BUSY	; TODO fix this for new display
 	RTS
 
 DISP_CURSOR_SETXY
@@ -527,24 +537,26 @@ DISP_CURSOR_SETXY
 	ROL MyTEMP2
 
 	LDA #$2C
-	STA DISP_RG
+;	STA DISP_RG	; TODO fix this for new display
 	LDA MyTEMP			; y position low byts
-	STA DISP_DT
-	JSR DISP_CHK_BUSY
+;	STA DISP_DT	; TODO fix this for new display
+;	JSR DISP_CHK_BUSY	; TODO fix this for new display
 	LDA #$2D
-	STA DISP_RG
+;	STA DISP_RG	; TODO fix this for new display
 	LDA MyTEMP2			; y position high byts
-	STA DISP_DT
-	JSR DISP_CHK_BUSY
+;	STA DISP_DT	; TODO fix this for new display
+;	JSR DISP_CHK_BUSY	; TODO fix this for new display
 
 	RTS
 
 DISP_TEXT_COLOUR
 	JSR LAB_GTBY		; GET NEXT BYTE (puts it in X)
 	TXA
-	STA DISP_col_t		; Used in VARI_BEEP routine
+;	STA DISP_col_t		; Used in VARI_BEEP routine 	; TODO fix this for new display
 
 DISP_TEXT_COLOUR_direct
+	RTS		; TODO fix this for new display
+
 	LDA #$63			; RED colour, bits 0,1,2
 	STA DISP_RG
 	LDA DISP_col_t		; get text colour
@@ -574,6 +586,8 @@ DISP_TEXT_COLOUR_direct
 	RTS
 
 DISP_TEXT_WR
+	RTS		; TODO fix this for new display
+
 	STA DISP_temp		; Save character
 
 	LDA DISP_temp				
@@ -584,6 +598,8 @@ DISP_TEXT_WR
 	BEQ DISP_textexit		; for now we ignore it
 
 DISP_normalchar	
+	RTS		; TODO fix this for new display
+
 ;	jsr DISP_CURSOR_SETXY	; adding this double spaces everything, but backspace behaves
 
 	LDA #$02			
@@ -596,6 +612,8 @@ DISP_normalchar
 			; no need to word wrap as display does this automatically 
 
 DISP_text_nonascii
+	RTS		; TODO fix this for new display
+
 	LDA DISP_temp
 	CMP #$08				; check for backspace
 	BNE DISP_textcheckCR
@@ -637,6 +655,8 @@ DISP_textexit
 	
 
 DISP_CHK_BUSY			; Read BIT2 from Glue, if it's LOW the display is busy
+	RTS		; TODO fix this for new display
+
 	LDA DISP_WAIT		; Get wait status
 	AND #$04			; it's in BIT2
 	CMP #$04			; Compare bit2
@@ -645,6 +665,8 @@ DISP_CHK_BUSY			; Read BIT2 from Glue, if it's LOW the display is busy
 
 ; DISPLAY ERROR
 DISP_flt
+	RTS		; TODO fix this for new display
+
 	LDY #$00
 
 DISP_flt_lp				; Display error message
@@ -675,13 +697,13 @@ IO_MODE
 	; check if mode 1 (graphics)
 	CMP #$01
 	BNE IO_MODE_text
-	JSR DISP_GRAPHICS_MODE
+;	JSR DISP_GRAPHICS_MODE		; TODO fix this for new display
 	JMP IO_MODE_exit
 
 	; else mode 0 (text)
 	; do text mode
 IO_MODE_text
-	JSR DISP_TEXT_MODE
+;	JSR DISP_TEXT_MODE	; TODO fix this for new display
 
 
 IO_MODE_exit
@@ -690,7 +712,9 @@ IO_MODE_exit
 	PLY
 	RTS
 
-DISP_clearbottomline	
+DISP_clearbottomline
+	RTS		; TODO fix this for new display
+
 	PHA
 	PHX
 	PHY
@@ -869,23 +893,23 @@ DISP_PLOT
 			; PLOT THE DOT
 	LDY DISP_posx_l
 	LDA #$46
-	JSR DISP_writereg
+;	JSR DISP_writereg	; TODO fix this for new display
 
 	LDY DISP_posx_h
 	LDA #$47
-	JSR DISP_writereg
+;	JSR DISP_writereg	; TODO fix this for new display
 
 	LDY DISP_posy_l
 	LDA #$48
-	JSR DISP_writereg
+;	JSR DISP_writereg	; TODO fix this for new display
 
 	LDY DISP_posy_h
 	LDA #$49
-	JSR DISP_writereg
+;	JSR DISP_writereg	; TODO fix this for new display
 
 	LDY DISP_col_l
 	LDA #$02
-	JSR DISP_writereg
+;	JSR DISP_writereg	; TODO fix this for new display
 
 	PLY
 	PLX
@@ -925,7 +949,7 @@ DISP_GETENDXY
 	STA DISP_posw_h
 	LDA	Itempl
 	STA DISP_posw_l
-			; END YYYY
+			; END YYYY	; TODO fix this for new display
 	JSR LAB_1C01        ; scan for "," , else do syntax error then warm start
 	JSR LAB_EVNM        ; evaluate expression and check is numeric,
                         ; else do typDISP_CIRCLEe mismatch
@@ -961,17 +985,17 @@ DISP_CIRCLE
 			; SET X
 	LDY DISP_posx_l
 	LDA #$99
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posx_h
 	LDA #$9A
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 			; SET Y
 	LDY DISP_posy_l
 	LDA #$9B
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posy_h
 	LDA #$9C
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 			; SET RADIUS
 	LDY DISP_dim_l
 	LDA #$9D
@@ -995,10 +1019,10 @@ DISP_circlenofill
 DISP_circledoit
 	LDY DISP_fill
 	LDA #$90
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 
 			; wait for display to be done
-	JSR DISP_busyloop
+;	JSR DISP_busyloop		; TODO fix this for new display
 
 	PLY
 	PLX
@@ -1007,6 +1031,8 @@ DISP_circledoit
 
 
 DISP_busyloop
+	RTS		; TODO fix this for new display
+
 	LDA #$90			; CHECK DCR
 	JSR DISP_readreg
 	ROL
@@ -1019,6 +1045,8 @@ DISP_busyloop
 	RTS
 
 DISP_SETXY_ENDXY
+	RTS		; TODO fix this for new display
+
 			; SET X
 	LDY DISP_posx_l
 	LDA #$91
@@ -1074,7 +1102,7 @@ DISP_LINE
 			; DRAW LINE
 	LDY #$80
 	LDA #$90
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 
 			; wait for display to be done
 	JSR DISP_busyloop
@@ -1120,7 +1148,7 @@ DISP_SQUARE_nofill
 			; DRAW SQUARE
 	; Y ALREADY HOLDS COMMAND
 	LDA #$90
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 
 			; wait for display to be done
 	JSR DISP_busyloop
@@ -1150,32 +1178,32 @@ DISP_ELIPSE
 			; SET X
 	LDY DISP_posx_l
 	LDA #$A5
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posx_h
 	LDA #$A6
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 			; SET Y
 	LDY DISP_posy_l
 	LDA #$A7
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posy_h
 	LDA #$A8
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 
 			; SET RADIUS X
 	LDY DISP_posw_l
 	LDA #$A1
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posw_h
 	LDA #$A2
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 			; SET RADIUS Y
 	LDY DISP_posh_l
 	LDA #$A3
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posh_h
 	LDA #$A4
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 
 			; SET COLOUR
 	LDA DISP_col_t
@@ -1194,7 +1222,7 @@ DISP_ELIPSE_nofill
 			; DRAW SQUARE
 	; Y ALREADY HOLDS COMMAND
 	LDA #$A0
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 
 			; wait for display to be done
 	JSR DISP_busyloop
@@ -1231,17 +1259,17 @@ DISP_TRIANGLE
 			; SET POINT 3
 	LDY DISP_posw_l
 	LDA #$A9
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posw_h
 	LDA #$AA
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 			; SET Y
 	LDY DISP_posh_l
 	LDA #$AB
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 	LDY DISP_posh_h
 	LDA #$AC
-	JSR DISP_writereg
+;	JSR DISP_writereg		; TODO fix this for new display
 
 	LDA DISP_col_t
 	JSR DISP_TEXT_COLOUR_direct
@@ -1259,7 +1287,7 @@ DISP_TRIANGLE
 DISP_TRIANGLE_nofill
 	; Y ALREADY HOLDS COMMAND
 	LDA #$90
-	JSR DISP_writereg	
+;	JSR DISP_writereg		; TODO fix this for new display
 
 			; wait for display to be done
 	JSR DISP_busyloop
@@ -1930,6 +1958,8 @@ CLRDONE:
 ;			we always print to the next character, don't need ; or , 
 ;			CRLF is not auto sent
 OUTK
+	RTS		; TODO fix this for new display
+
 	PHY
 	PHX
 	PHA
@@ -2076,28 +2106,23 @@ DISP_doscroll_data		; order is reg, data, 34 bytes
 
 
 
-	; banner done with https://www.asciiart.eu/text-to-ascii-art
-LAB_banner
-	.byte	$0D,"    __   ______ _____  ______ ____  ___ ",$0D,$0A		; "  <- stops weird colours in editor
-	.byte		"   / /  /_  __// ___/ / ____// __ \|__ \",$0D,$0A		; "  <- stops weird colours in editor  
-	.byte		"  / /    / /  / __ \ /___ \ / / / /__/ /",$0D,$0A		; "  <- stops weird colours in editor    
-	.byte		" / /___ / /  / /_/ /____/ // /_/ // __/ ",$0D,$0A		; "  <- stops weird colours in editor    
-	.byte		"/_____//_/   \____//_____/ \____//____/ ",$0A,$00		; "  <- stops weird colours in editor    
-
-
 LAB_mess 					; sign on string (Console)
 	.byte	$0D,"[C]Cold/[W]arm or [M]onitor ?",$00
 
-KYB_mess					; sign on string (Keyboard)
-	.byte	$0D,"C/W/M ? ",$00
-KYB_basmess_str
-	.byte	$0D,$0D,"EhBASIC ",$00
-KYB_wozmess_str
-	.byte	$0D,$0D,"eWOZMON ",$00
 LOAD_mess
 	.byte   "Loading - ",$00
 LOAD_nofile_mess
 	.byte   "NO FILE FOUND",$0D,$0A,$00
+
+
+	; banner done with https://www.asciiart.eu/text-to-ascii-art
+LAB_banner
+	.byte	$0D,"    __   ______ _____  ______ ____  ___   __  ",$0D,$0A		; "  <- stops weird colours in editor
+	.byte		"   / /  /_  __// ___/ / ____// __ \|__ \ / /_ ",$0D,$0A		; "  <- stops weird colours in editor  
+	.byte		"  / /    / /  / __ \ /___ \ / / / /__/ // __ \",$0D,$0A		; "  <- stops weird colours in editor    
+	.byte		" / /___ / /  / /_/ /____/ // /_/ // __// /_/ /",$0D,$0A		; "  <- stops weird colours in editor    
+	.byte		"/_____//_/   \____//_____/ \____//____/_.___/ ",$0A,$00		; "  <- stops weird colours in editor    
+
 
 
 ERR_disp
