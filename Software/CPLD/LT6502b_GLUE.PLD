@@ -126,6 +126,12 @@ Pinnode = Q1;
 Pinnode = Q2;
 
 
+/*********************************************************
+ *                   Local Variables                     *
+ *********************************************************/
+FIELD Address = [A15..A0];
+
+
 
 
 /*********************************************************
@@ -169,7 +175,8 @@ PHI2.D = !PHI2
 
 
 /* FT245 Serial port 0xBFF0 - 0xBFFF */			
-FT_CS = A15 & !A14 & A13 & A12   &   A11 & A10 & A9 & A8   &   A7 & A6 & A5 & A4;
+/*FT_CS = A15 & !A14 & A13 & A12   &   A11 & A10 & A9 & A8   &   A7 & A6 & A5 & A4;*/
+FT_CS = PHI2 & Address:[BFF0..BFFF];
 
 RD_FT = PHI2 & FT_CS & A0 &  RnW;		/* 0xBFF1 */
 WR_FT = PHI2 & FT_CS & A0 & !RnW;		/* 0xBFF1 */ 
@@ -227,13 +234,15 @@ ROM_nCS = 'b'1;        /* ROM chip select always active */
 
 /* RAM bank 0 0x0000 - 0x7FFF */			
 RAM_nCS0 = !A15;	
-RW = PHI2 & !RnW & !FT_CS ;
-RD = PHI2 &  RnW & !FT_CS;
-
 
 /* RAM bank 1 0x8000 - 0xBDFF */
-RAM_nCS1 = A15 & !A14 & !FT_CS & !ACIA_nCS & !DISP_nCS & !VIA_nCS & !CF_nCS & !BEEP_CS & !SID_nCS & !MODEM_nCS;
+/*RAM_nCS1 = A15 & !A14 & !FT_CS & !ACIA_nCS & !DISP_nCS & !VIA_nCS & !CF_nCS & !BEEP_CS & !SID_nCS & !MODEM_nCS;*/
+RAM_nCS1 = PHI2 & Address:[8000..BEFF];
 
+
+/* READ AND WRITE LINES */
+RW = PHI2 & !RnW & !FT_CS ;
+RD = PHI2 &  RnW & !FT_CS;
 
 
 
@@ -245,3 +254,11 @@ LED = CLK;              /* Used for debugging */
 
 /* END OF FILE */
 /*****************************************************/
+
+
+
+
+
+/* Logic Equations */
+VIA     = !AS & Address:[E01000..E01FFF];
+ACIA    = !AS & Address:[E00000..E00FFF];
