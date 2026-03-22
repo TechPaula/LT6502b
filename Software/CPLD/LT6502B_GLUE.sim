@@ -1,0 +1,262 @@
+%SIGNAL
+PIN  19 =  A0 
+PIN  20 =  A1 
+PIN  21 =  A2 
+PIN  22 =  A3 
+PIN  23 =  A4 
+PIN  24 =  A5 
+PIN  25 =  A6 
+PIN  17 =  A7 
+PIN  16 =  A8 
+PIN  14 =  A9 
+PIN  13 =  A10 
+PIN  12 =  A11 
+PIN  10 =  A12 
+PIN   9 =  A13 
+PIN   8 =  A14 
+PIN   7 =  A15 
+PIN  77 = !ACIA_nCS 
+PIN  92 =  BEEPER 
+PIN  29 = !CF_nCS 
+PIN  28 = !CF_nRES 
+PIN  87 =  CLK 
+PIN  83 =  CLK_OUT 
+PIN  60 =  D0 
+PIN  58 =  D1 
+PIN  57 =  D2 
+PIN  56 =  D3 
+PIN  55 =  D4 
+PIN  54 =  D5 
+PIN  53 =  D6 
+PIN  52 =  D7 
+PIN   6 =  DISP_BL 
+PIN  27 =  DISP_DATA_EN 
+PIN 100 =  DISP_E 
+PIN   2 =  DISP_INT 
+PIN  98 = !DISP_nCS 
+PIN  99 = !DISP_nRES 
+PIN   5 =  DISP_nWT 
+PIN  71 =  KEYMOD_RnW 
+PIN  94 = !LED 
+PIN  30 =  LED_PWM 
+PIN  97 = !MODEM_nCS 
+PIN  31 = !MODEM_nRES 
+PIN  75 =  PHI2 
+PIN  84 =  Q0 
+PIN   0 =  Q1 
+PIN   0 =  Q2 
+PIN  79 = !RAM_nCS0 
+PIN  78 = !RAM_nCS1 
+PIN  37 = !RD 
+PIN  48 = !RD_FT 
+PIN  93 = !RESET 
+PIN  46 = !ROM_nCS 
+PIN  45 = !ROM_nR 
+PIN  36 = !RW 
+PIN  49 =  RXF 
+PIN  90 =  RnW 
+PIN  96 = !SID_nCS 
+PIN  50 =  TXE 
+PIN  33 = !VIA_nCS 
+PIN  47 =  WR_FT 
+%END
+
+%FIELD
+FIELD Address = A15,A14,A13,A12,A11,A10,A9,A8,A7,A6,A5,A4,A3,A2,A1,A0
+%END
+
+%EQUATION
+ACIA_nCS =>
+    !A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+
+BEEPER =>
+    BEEPER & D2
+  # BEEPER & !PHI2
+  # !A15 & BEEPER
+  # A14 & BEEPER
+  # !A13 & BEEPER
+  # !A12 & BEEPER
+  # !A11 & BEEPER
+  # !A10 & BEEPER
+  # !A9 & BEEPER
+  # !A8 & BEEPER
+  # !A7 & BEEPER
+  # A6 & BEEPER
+  # !A5 & BEEPER
+  # A4 & BEEPER
+  # !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & D2 & PHI2
+
+BEEP_CS =>
+    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+
+BEEP_R =>
+    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & !D2 & PHI2
+
+BEEP_S =>
+    !A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & D2 & PHI2
+
+CF_nCS =>
+    A4 & A5 & !A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
+
+CF_nRES =>
+    RESET
+
+CLK_OUT =>
+    CLK
+
+D0 =>
+    !RXF
+
+D0.oe  =>
+    !A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2 & RnW
+
+D1 =>
+    !TXE
+
+D1.oe  =>
+    !A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2 & RnW
+
+D2 =>
+    DISP_nWT
+
+D2.oe  =>
+    A1 & DISP_nCS
+
+DISP_BL =>
+    1 
+
+DISP_DATA_EN =>
+    !A1 & DISP_nCS
+
+DISP_E =>
+    !A1 & DISP_nCS & PHI2 & !Q0
+
+DISP_nCS =>
+    A4 & !A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+
+DISP_nRES =>
+    RESET
+
+FT_CS =>
+    A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+
+KEYMOD_RnW =>
+    RnW
+
+LED =>
+    CLK
+
+LED_PWM =>
+    0 
+
+MODEM_nCS =>
+    1 
+
+MODEM_nRES =>
+    RESET
+
+PHI2.d  =>
+    !PHI2
+  # PHI2 & !Q2
+  # PHI2 & !Q1
+  # PHI2 & !Q0
+
+PHI2.ar  =>
+    RESET
+
+PHI2.ck  =>
+    CLK
+
+Q0.d  =>
+    !PHI2
+  # PHI2 & !Q0
+
+Q0.ar  =>
+    RESET
+
+Q0.ck  =>
+    CLK
+
+Q1.d  =>
+    !DISP_nCS & !PHI2
+  # PHI2 & Q0 & !Q1
+  # PHI2 & !Q0 & Q1
+
+Q1.ar  =>
+    RESET
+
+Q1.ck  =>
+    CLK
+
+Q2.d  =>
+    !ACIA_nCS & !MODEM_nCS & !PHI2 & !SID_nCS
+  # PHI2 & !Q1 & Q2
+  # PHI2 & !Q0 & Q2
+  # PHI2 & Q0 & Q1 & !Q2
+
+Q2.ar  =>
+    RESET
+
+Q2.ck  =>
+    CLK
+
+RAM_nCS0 =>
+    !A15
+
+RAM_nCS1 =>
+    !A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2
+  # !A10 & A12 & !A14 & A15 & PHI2
+  # !A11 & !A12 & !A14 & A15 & PHI2
+  # A9 & A10 & A11 & A12 & !A13 & !A14 & A15 & PHI2
+  # A10 & !A11 & A12 & !A14 & A15 & PHI2
+  # !A10 & A11 & !A12 & !A14 & A15 & PHI2
+  # A9 & A10 & A11 & !A12 & !A14 & A15 & PHI2
+  # !A9 & A10 & A11 & !A14 & A15 & PHI2
+
+RD =>
+    !A15 & PHI2 & RnW
+  # A14 & PHI2 & RnW
+  # !A13 & PHI2 & RnW
+  # !A12 & PHI2 & RnW
+  # !A11 & PHI2 & RnW
+  # !A10 & PHI2 & RnW
+  # !A9 & PHI2 & RnW
+  # !A8 & PHI2 & RnW
+  # !A7 & PHI2 & RnW
+  # !A6 & PHI2 & RnW
+  # !A4 & PHI2 & RnW
+  # !A5 & PHI2 & RnW
+
+RD_FT =>
+    A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2 & RnW
+
+ROM_nCS =>
+    1 
+
+ROM_nR =>
+    A14 & A15
+
+RW =>
+    !A15 & PHI2 & !RnW
+  # A14 & PHI2 & !RnW
+  # !A13 & PHI2 & !RnW
+  # !A12 & PHI2 & !RnW
+  # !A11 & PHI2 & !RnW
+  # !A10 & PHI2 & !RnW
+  # !A9 & PHI2 & !RnW
+  # !A8 & PHI2 & !RnW
+  # !A7 & PHI2 & !RnW
+  # !A6 & PHI2 & !RnW
+  # !A4 & PHI2 & !RnW
+  # !A5 & PHI2 & !RnW
+
+SID_nCS =>
+    1 
+
+VIA_nCS =>
+    !A4 & !A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15
+
+WR_FT =>
+    A0 & A4 & A5 & A6 & A7 & A8 & A9 & A10 & A11 & A12 & A13 & !A14 & A15 & PHI2 & !RnW
+
+%END

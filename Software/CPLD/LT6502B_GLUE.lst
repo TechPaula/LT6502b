@@ -1,0 +1,302 @@
+LISTING FOR LOGIC DESCRIPTION FILE: LT6502B_GLUE.pld                 Page 1
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Sun Mar 22 09:43:33 2026
+
+  1:Name     LT6502b_GLUE;
+  2:PartNo   ;
+  3:Date     21/03/26;
+  4:Revision ;
+  5:Designer Paula;
+  6:Company  ;
+  7:Assembly ;
+  8:Location ;
+  9:Device    f1508isptqfp100;
+ 10:
+ 11:/*********************************************************
+ 12: *                     INPUT PINS                        *
+ 13: *********************************************************/
+ 14:
+ 15:
+ 16:/* SYSTEM signals */
+ 17:Pin 87 = CLK;       /* MAIN OSC CLOCK IN */
+ 18:Pin 93 = !RESET;    /* GLOBAL RESET IN */
+ 19:Pin 84 = Q0;        /* Doesn't go anywhere, legacy from LT6502 */
+ 20:Pin 83 = CLK_OUT;   /* same speed as CPU unstretched, sent to VIA */
+ 21:
+ 22:
+ 23:Pin 37 = !RD;       /* OUTPUT */
+ 24:Pin 36 = !RW;       /* OUTPUT */
+ 25:
+ 26:Pin 94 = !LED;      /* Test LED output */
+ 27:
+ 28:
+ 29:/* CPU signals */
+ 30:Pin 75 = PHI2;      /* CPU_CLK OUTPUT */
+ 31:Pin 90 = RnW;       /* INPUT */
+ 32:
+ 33:
+ 34:/* ROM Enables */
+ 35:Pin 45 = !ROM_nR;    /* OUTPUT */
+ 36:Pin 46 = !ROM_nCS;   /* OUTPUT to speed things up, tie this low and just use nR */
+ 37:
+ 38:
+ 39:/* RAM CS */
+ 40:Pin 79 = !RAM_nCS0;    /* OUTPUT */
+ 41:Pin 78 = !RAM_nCS1;    /* OUTPUT */
+ 42:
+ 43:
+ 44:/* FT245, Console, Signals */
+ 45:Pin 48 = !RD_FT;           /* OUTPUT */
+ 46:Pin 47 = WR_FT;            /* OUTPUT */
+ 47:Pin 49 = RXF;                /* BIT 0 of 6850 register, INPUT */
+ 48:Pin 50 = TXE;                /* BIT 1 of 6850 register, INPUT */
+ 49:                           /* Had to swap pin 49/50, Labels swapped on schematic, DOH! */
+ 50:
+ 51:/* 65C22 VIA */
+ 52:Pin 33 = !VIA_nCS;
+ 53:
+
+LISTING FOR LOGIC DESCRIPTION FILE: LT6502B_GLUE.pld                 Page 2
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Sun Mar 22 09:43:33 2026
+
+ 54:
+ 55:/* Compact Flash */
+ 56:Pin 28 = !CF_nRES;       /* OUT, was nCS, but I swapped pins on the schematic, DOH! */
+ 57:Pin 29 = !CF_nCS;        /* OUT, was nRES, but I swapped pins on the schematic, DOH! */
+ 58:
+ 59:
+ 60:/* Keyboard Serial port & MODEM via atmega644 */
+ 61:Pin 77 = !ACIA_nCS;
+ 62:Pin 97 = !MODEM_nCS;
+ 63:Pin 31 = !MODEM_nRES;
+ 64:Pin 71 = KEYMOD_RnW;
+ 65:
+ 66:
+ 67:/* nanoSWIN SID */
+ 68:Pin 96 = !SID_nCS;
+ 69:
+ 70:
+ 71:/* Keyboard LEDs */
+ 72:Pin 30 = LED_PWM;         /* PWM for keyboard LEDs */
+ 73:
+ 74:
+ 75:/* Display */
+ 76:Pin 98 = !DISP_nCS;
+ 77:Pin 99 = !DISP_nRES;
+ 78:Pin 27 = DISP_DATA_EN;    /* OUT, databus level shifter enable */
+ 79:Pin  6 = DISP_BL;
+ 80:Pin 100 = DISP_E;         /* OUT, 6800 "E" signal */
+ 81:Pin 5 = DISP_nWT;
+ 82:Pin 2 = DISP_INT;         /* INPUT, from display, unused */
+ 83:
+ 84:
+ 85:/* Beeper */
+ 86:Pin 92 = BEEPER;
+ 87:
+ 88:
+ 89:/* Address bus all are INPUT */
+ 90:Pin 19 = A0;
+ 91:Pin 20 = A1;
+ 92:Pin 21 = A2;
+ 93:Pin 22 = A3;
+ 94:Pin 23 = A4;
+ 95:Pin 24 = A5;
+ 96:Pin 25 = A6;
+ 97:Pin 17 = A7;
+ 98:Pin 16 = A8;
+ 99:Pin 14 = A9;
+100:Pin 13 = A10;
+101:Pin 12 = A11;
+102:Pin 10 = A12;
+103:Pin  9 = A13;
+104:Pin  8 = A14;
+105:Pin  7 = A15;
+106:
+107:
+
+LISTING FOR LOGIC DESCRIPTION FILE: LT6502B_GLUE.pld                 Page 3
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Sun Mar 22 09:43:33 2026
+
+108:/* Data bus */
+109:Pin 60 = D0;
+110:Pin 58 = D1;
+111:Pin 57 = D2;
+112:Pin 56 = D3;
+113:Pin 55 = D4;
+114:Pin 54 = D5;
+115:Pin 53 = D6;
+116:Pin 52 = D7;
+117:
+118:
+119:
+120:/*********************************************************
+121: *                        PINNODES                       *
+122: *********************************************************/
+123:
+124:/* Clock Stretch nodes */
+125:Pinnode  0  = Q1;
+126:Pinnode  0  = Q2;
+127:
+128:
+129:/*********************************************************
+130: *                   Local Variables                     *
+131: *********************************************************/
+132:FIELD Address = [A15..A0];
+133:
+134:
+135:
+136:
+137:/*********************************************************
+138: *                     Clock Bits and bobs               *
+139: *********************************************************/
+140:
+141:
+142:/* Clock Stretching */
+143:Q0.ck = CLK;
+144:Q1.ck = CLK;
+145:Q2.ck = CLK;
+146:PHI2.ck = CLK;
+147:
+148:Q0.ar = RESET;
+149:Q1.ar = RESET;
+150:Q2.ar = RESET;
+151:PHI2.ar = RESET;
+152:
+153:Q0.D = !PHI2
+154:       # PHI2 & !Q0;
+155:
+156:Q1.D = !PHI2 & !(DISP_nCS # FT_CS)
+157:       # PHI2 & !Q1 & Q0
+158:       # PHI2 & Q1 & !Q0;
+159:
+160:Q2.D = !PHI2 & !(ACIA_nCS # SID_nCS # MODEM_nCS)
+161:       # PHI2 & Q2 & !Q1
+
+LISTING FOR LOGIC DESCRIPTION FILE: LT6502B_GLUE.pld                 Page 4
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Sun Mar 22 09:43:33 2026
+
+162:       # PHI2 & Q2 & !Q0        
+163:       # PHI2 & !Q2 & Q1 & Q0;
+164:
+165:PHI2.D = !PHI2
+166:       # PHI2 & !Q2     
+167:       # PHI2 & !Q1
+168:       # PHI2 & !Q0     
+169:       # !PHI2 & Q2 & Q1 & Q0;
+170:
+171:
+172:/*********************************************************
+173: *                     Decode & glue                     *
+174: *********************************************************/
+175:
+176:
+177:/* FT245 Serial port 0xBFF0 - 0xBFFF */                 
+178:FT_CS = PHI2 & Address:[BFF0..BFFF];
+179:
+180:RD_FT = PHI2 & FT_CS & A0 &  RnW;               /* 0xBFF1 */
+181:WR_FT = PHI2 & FT_CS & A0 & !RnW;               /* 0xBFF1 */ 
+182:D0.oe = FT_CS & !A0 & RnW;                      /* 0xBFF0 */
+183:D1.oe = FT_CS & !A0 & RnW;                      /* 0xBFF0 */
+184:
+185:D0 = !RXF;                              
+186:D1 = !TXE;                      
+187:
+188:
+189:/* Keyboard ACIA - 0xBFE0 - 0xBFEF */
+190:ACIA_nCS = PHI2 & Address:[BFE0..BFEF];
+191: 
+192:/* Display 0xBFD0 - 0xBFDF */
+193:DISP_nCS = PHI2 & Address:[BFD0..BFDF];
+194:DISP_DATA_EN = DISP_nCS & !A1;
+195:DISP_E = DISP_nCS & PHI2 & !Q0 & !A1;
+196:DISP_BL = 'b'1;                 /* toggling this causes board resets */
+197:DISP_nRES = RESET;                      /* Not actually used */
+198:D2 = DISP_nWT;
+199:D2.OE = DISP_nCS & A1;
+200:
+201:/* Onboard VIA 65c22 0xBFC0 - 0xBFCF */
+202:VIA_nCS = Address:[BFC0..BFCF];
+203:
+204:
+205:/* Compact Flash 0xBFB0 - 0xBFBF */
+206:CF_nCS = Address:[BFB0..BFBF];
+207:CF_nRES = RESET;
+208:
+209:
+210:/* Beeper, a simple SR latch for now - 0xBFA0 - 0xBFAF */
+211:BEEP_CS = PHI2 & Address:[BFA0..BFAF];
+212:
+213:BEEP_S = D2 & BEEP_CS;
+214:BEEP_R = !D2 & BEEP_CS;
+215:BEEPER =  (BEEPER & !BEEP_R) # BEEP_S;
+
+LISTING FOR LOGIC DESCRIPTION FILE: LT6502B_GLUE.pld                 Page 5
+
+CUPL(WM): Universal Compiler for Programmable Logic
+Version 5.0a Serial# 60008009
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+Created Sun Mar 22 09:43:33 2026
+
+216:
+217:
+218:/* MODEM */
+219:MODEM_nCS = 'b'1;
+220:MODEM_nRES = RESET;
+221:KEYMOD_RnW = RnW;      /* needed for both keyboard and Modem */
+222:
+223:/* SID */
+224:SID_nCS = 'b'1;
+225:
+226:/* LED brightness */
+227:LED_PWM = 'b'0;
+228:
+229:
+230:/* ROM 0xC000 - 0xFFFF */
+231:ROM_nR  = A15 & A14;   /* ROM Read address */
+232:ROM_nCS = 'b'1;        /* ROM chip select always active */
+233:
+234:
+235:/* RAM bank 0 0x0000 - 0x7FFF */                        
+236:RAM_nCS0 = !A15;        
+237:
+238:/* RAM bank 1 0x8000 - 0xBDFF */
+239:RAM_nCS1 = PHI2 & Address:[8000..BEFF];
+240:
+241:
+242:/* READ AND WRITE LINES */
+243:RW = PHI2 & !RnW & !FT_CS ;
+244:RD = PHI2 &  RnW & !FT_CS;
+245:
+246:
+247:
+248:/* system wide logic */
+249:CLK_OUT = CLK;
+250:LED = CLK;              /* Used for debugging */
+251:
+252:
+253:
+254:/* END OF FILE */
+255:/*****************************************************/
+256:
+257:
+258:
+259:
+260:
+
+
+
